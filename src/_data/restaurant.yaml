@@ -1,0 +1,18 @@
+---
+cta:
+  - label: "Make a Reservation"
+    action:
+      option: "reservations"
+  - label: "Order Online"
+    action:
+      option: "order"
+  - label: "Buy Gift Cards"
+    action:
+      option: "gift-card"
+service_hours:
+  - service: "CLOSED"
+    hours: "Monday & Tuesday"
+  - service: "Dinner"
+    hours: "Wed–Sat: 4–10pm\nSun: 4–9pm"
+  - service: "Happy Hour",
+    hours: "Sun, Wed, Thur: 4-6pm"

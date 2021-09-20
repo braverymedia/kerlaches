@@ -1,0 +1,127 @@
+site_url: https://contigotexas.com
+display_url: https://contigotexas.com
+search: false
+
+backend:
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: master
+media_folder: "src/static/img"
+public_folder: "/static/img"
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 171ee3fe8b8f7aafe121
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
+collections:
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Global Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: "Site Title", name: site_title, widget: string }
+          - { label: "SEO Description", name: site_description, widget: text }
+          - label: "Announcement Banner"
+            name: banner
+            widget: object
+            fields:
+              - { label: "Show announcement banner", name: show_banner, widget: boolean }
+              - { label: "Announcement Text", name: banner_copy, widget: string }
+              - { label: "Announcement Link", name: banner_link, widget: string }
+              - label: "Announcement Style"
+                name: banner_style
+                widget: select
+                options:
+                  - { label: "Banner", value: "default" }
+                  - { label: "Fullscreen", value: "full" }
+          - { label: "Reservations Widget", name: "reservations_widget", widget: text }
+          - { label: "Online Ordering Link", name: "order_link", widget: string }
+      - label: "Restaurant Details"
+        name: "header"
+        file: "src/_data/restaurant.yaml"
+        fields:
+          - label: "Buttons"
+            name: "cta"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Button Label", name: "label", widget: "string" }
+              - label: "Type"
+                name: "action"
+                widget: "select"
+                options:
+                  - { label: "Reservations", value: "reservations" }
+                  - { label: "Order Online", value: "order" }
+                  - { label: "Gift Cards", value: "gift-card" }
+          - label: "Service Hours"
+            name: "service_hours"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Service", name: "service", widget: "string" }
+              - { label: "Hours", name: "hours", widget: "text" }
+          - { label: Map, name: location, widget: map }
+          - label: "Menus"
+            name: "menus"
+            widget: object
+            allow_add: true
+            fields:
+              - { label: "Service Name", name: "service", widget: string }
+              - { label: "Upload Menu", name: "menu_file", widget: file }
+      - label: Homepage
+        name: "homepage"
+        file: "src/index.njk"
+        fields:
+          - label: "Slideshow Gallery"
+            name: "slider"
+            allow_add: true
+            widget: object
+            fields:
+              - label: "Image"
+                name: "gallery_image"
+                widget: image
+                media_library:
+                  config:
+                    multiple: false
+                    imagesOnly: true
+              - label: "Image Description"
+                name: "alt"
+                widget: string
+          - label: "Introduction"
+            name: "site_intro"
+            widget: "object"
+            allow_add: false
+            fields:
+              - { label: "Subhead", name: "subhead", widget: string }
+              - { label: "Content", name: "content", widget: markdown }
+          - label: "Content Cards"
+            name: "cards"
+            widget: "object"
+            allow_add: true
+            fields:
+              - label: "Image Placement"
+                name: "image_style"
+                widget: select
+                options: [ "Left", "Right", "Top" ]
+              -{ label: "Content", name: "content", widget: markdown }
+          - label: "Grid Gallery"
+            name: "grid"
+            allow_add: true
+            widget: object
+            fields:
+              - label: "Image"
+                name: "gallery_image"
+                widget: image
+                media_library:
+                  config:
+                    multiple: false
+                    imagesOnly: true
+              - label: "Image Description"
+                name: "alt"
+                widget: string
