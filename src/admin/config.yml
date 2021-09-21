@@ -27,6 +27,13 @@ collections:
         fields:
           - { label: "Site Title", name: site_title, widget: string }
           - { label: "SEO Description", name: site_description, widget: text }
+          - label: "Social Media"
+            name: social
+            widget: object
+            fields:
+              - { label: "Instagram  URL", name: instagram, widget: string }
+              - { label: "Facebook URL", name: facebook, widget: string }
+              - { label: "Twitter URL", name: twitter, widget: string }
           - label: "Announcement Banner"
             name: banner
             widget: object
