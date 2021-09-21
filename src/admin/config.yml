@@ -81,9 +81,15 @@ collections:
             fields:
               - { label: "Service Name", name: "service", widget: string }
               - { label: "Upload Menu", name: "menu_file", widget: file }
-      - label: Homepage
-        name: "homepage"
-        file: "src/index.njk"
+  - label: Homepage
+    identifier_field: name
+    extension: md
+    format: yaml-frontmatter
+    name: "homepage"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "src/index.md"
         fields:
           - label: "Slideshow Gallery"
             name: "slider"
@@ -116,7 +122,7 @@ collections:
                 name: "image_style"
                 widget: select
                 options: [ "Left", "Right", "Top" ]
-              -{ label: "Content", name: "content", widget: markdown }
+              - { label: "Content", name: "content", widget: markdown }
           - label: "Grid Gallery"
             name: "grid"
             allow_add: true

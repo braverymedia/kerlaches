@@ -14,5 +14,5 @@ service_hours:
     hours: "Monday & Tuesday"
   - service: "Dinner"
     hours: "Wed–Sat: 4–10pm\nSun: 4–9pm"
-  - service: "Happy Hour",
+  - service: "Happy Hour"
     hours: "Sun, Wed, Thur: 4-6pm"

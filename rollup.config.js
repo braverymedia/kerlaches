@@ -12,9 +12,9 @@ const JS_SRC = path.join(ASSETS_DIR, 'js');
 const JS_DIST = path.join(DIST_DIR, 'assets/js');
 
 export default {
-    input: path.join(JS_SRC, 'tf.js'),
+    input: path.join(JS_SRC, 'contigo.js'),
     output: {
-        file: path.join(JS_DIST, 'tf.bundle.js'),
+        file: path.join(JS_DIST, 'contigo.bundle.js'),
         format: 'iife'
     },
     plugins: [

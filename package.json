@@ -4,10 +4,10 @@
   "description": "Restaurant website with 11ty and Netlify CMS.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass _includes/assets/scss:_site/assets/css",
+    "sass": "sass src/_includes/assets/scss:_site/assets/css",
     "postcss": "postcss _site/assets/css/*.css --no-map --replace",
     "build:sass": "npm-run-all --sequential sass postcss",
-    "watch:sass": "sass --watch _includes/assets/scss:_site/assets/css",
+    "watch:sass": "sass --watch src/_includes/assets/scss:_site/assets/css",
     "build:js": "rollup -c",
     "watch:js": "rollup -c --watch",
     "build:eleventy": "eleventy",
@@ -35,6 +35,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "autoprefixer": "^10.3.4",
     "clean-css": "^4.2.3",
     "cross-env": "^7.0.3",
