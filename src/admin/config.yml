@@ -6,12 +6,12 @@ backend:
   # Use netlify identity as backend
   name: git-gateway
   branch: main
-media_folder: "src/static/img"
-public_folder: "/static/img"
 media_library:
-  name: uploadcare
+  name: cloudinary
+  output_filename_only: true
   config:
-    publicKey: 171ee3fe8b8f7aafe121
+    cloud_name: contigo
+    api_key: 319787521616787
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
@@ -21,8 +21,8 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Global Settings"
-        name: "settings"
+      - name: "settings"
+        label: "Global Settings"
         file: "src/_data/settings.yaml"
         fields:
           - { label: "Site Title", name: site_title, widget: string }
