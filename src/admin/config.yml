@@ -8,7 +8,6 @@ backend:
   branch: main
 media_library:
   name: cloudinary
-  output_filename_only: true
   config:
     cloud_name: contigo
     api_key: 319787521616787
