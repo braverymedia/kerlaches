@@ -49,6 +49,8 @@ collections:
                   - { label: "Fullscreen", value: "full" }
           - { label: "Reservations Widget", name: "reservations_widget", widget: text }
           - { label: "Online Ordering Link", name: "order_link", widget: string }
+          - { label: Address, name: location, widget: string }
+          - { label: "Phone Number", name: phone, widget: string }
       - label: "Restaurant Details"
         name: "header"
         file: "src/_data/restaurant.yaml"
@@ -73,7 +75,6 @@ collections:
             fields:
               - { label: "Service", name: "service", widget: "string" }
               - { label: "Hours", name: "hours", widget: "text" }
-          - { label: Map, name: location, widget: map }
           - label: "Menus"
             name: "menus"
             widget: object
