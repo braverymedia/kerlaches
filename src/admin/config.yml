@@ -74,7 +74,7 @@ collections:
               - { label: "Hours", name: "hours", widget: "text" }
           - label: "Menus"
             name: "menus"
-            widget: object
+            widget: list
             allow_add: true
             fields:
               - { label: "Service Name", name: "service", widget: string }
@@ -92,7 +92,7 @@ collections:
           - label: "Slideshow Gallery"
             name: "slider"
             allow_add: true
-            widget: object
+            widget: list
             fields:
               - label: "Image"
                 name: "gallery_image"
@@ -113,7 +113,7 @@ collections:
               - { label: "Content", name: "content", widget: markdown }
           - label: "Content Cards"
             name: "cards"
-            widget: "object"
+            widget: "list"
             allow_add: true
             fields:
               - label: "Image Placement"
@@ -124,7 +124,7 @@ collections:
           - label: "Grid Gallery"
             name: "grid"
             allow_add: true
-            widget: object
+            widget: list
             fields:
               - label: "Image"
                 name: "gallery_image"
