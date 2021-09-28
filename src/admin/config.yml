@@ -31,19 +31,20 @@ collections:
             name: social
             widget: object
             fields:
-              - { label: "Instagram  URL", name: instagram, widget: string }
-              - { label: "Facebook URL", name: facebook, widget: string }
-              - { label: "Twitter URL", name: twitter, widget: string }
+              - { label: "Instagram  URL", name: instagram, required: false, widget: string }
+              - { label: "Facebook URL", name: facebook, required: false, widget: string }
+              - { label: "Twitter URL", name: twitter, required: false, widget: string }
           - label: "Announcement Banner"
             name: banner
             widget: object
             fields:
               - { label: "Show announcement banner", name: show_banner, widget: boolean }
-              - { label: "Announcement Text", name: banner_copy, widget: string }
-              - { label: "Announcement Link", name: banner_link, widget: string }
+              - { label: "Announcement Text", name: banner_copy, required: false, widget: string }
+              - { label: "Announcement Link", name: banner_link, required: false, widget: string }
               - label: "Announcement Style"
                 name: banner_style
                 widget: select
+                required: false
                 options:
                   - { label: "Banner", value: "default" }
                   - { label: "Fullscreen", value: "full" }
