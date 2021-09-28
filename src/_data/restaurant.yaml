@@ -1,18 +1,20 @@
----
 cta:
-  - label: "Make a Reservation"
-    action:
-      option: "reservations"
-  - label: "Order Online"
-    action:
-      option: "order"
-  - label: "Buy Gift Cards"
-    action:
-      option: "gift-card"
+  - label: Make a Reservation
+    action: reservations
+  - label: Order Online
+    action: order
+  - label: Buy Gift Cards
+    action: gift-card
 service_hours:
-  - service: "CLOSED"
-    hours: "Monday & Tuesday"
-  - service: "Dinner"
-    hours: "Wed–Sat: 4–10pm\nSun: 4–9pm"
-  - service: "Happy Hour"
+  - service: CLOSED
+    hours: Monday & Tuesday
+  - service: Dinner
+    hours: |-
+      Wed–Sat: 4–10pm
+      Sun: 4–9pm
+  - service: Happy Hour
     hours: "Sun, Wed, Thur: 4-6pm"
+location: '{"type":"Point","coordinates":[-97.7333906,30.2621445]}'
+menus:
+  service: Dinner Menu
+  menu_file: https://ucarecdn.com/c6de811a-9249-444e-a0f5-84a795ab3dcc/
