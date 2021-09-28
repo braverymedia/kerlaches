@@ -6,11 +6,8 @@ backend:
   # Use netlify identity as backend
   name: git-gateway
   branch: main
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: contigo
-    api_key: 319787521616787
+media_folder: "src/assets/media"
+public_folder: "/assets/media"
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
