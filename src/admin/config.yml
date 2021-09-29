@@ -46,6 +46,7 @@ collections:
                   - { label: "Fullscreen", value: "full" }
           - { label: "Reservations Widget", name: "reservations_widget", widget: text }
           - { label: "Online Ordering Link", name: "order_link", widget: string }
+          - { label: "Gift Cards Link", name: "gift_cards", widget: string }
           - { label: Address, name: location, widget: string }
           - { label: "Phone Number", name: phone, widget: string }
       - label: "Restaurant Details"

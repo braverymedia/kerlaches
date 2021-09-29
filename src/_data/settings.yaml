@@ -7,3 +7,4 @@ banner:
   banner_link: ""
 reservations_widget: '<div id="Tock_widget_container" data-tock-display-mode="Button" data-tock-color-mode="White" data-tock-locale="en-us" data-tock-timezone="America/Chicago"></div>'
 order_link: "https://www.toasttab.com/contigo-austin/v3"
+gift_cards: "https://www.toasttab.com/contigo-austin/giftcards"

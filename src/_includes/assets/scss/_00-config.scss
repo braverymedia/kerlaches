@@ -1,0 +1,69 @@
+// Mixins
+$mq: (
+    "xs": 375px,
+    "sm": 768px,
+    "md": 1024px,
+    "lg": 1360px,
+    "xl": 1600px,
+    "huge": 1980px,
+);
+
+@mixin mq($res) {
+
+
+    @if xs==$res {
+        @media only screen and (min-width: #{map-get($mq, "xs")}) {
+            @content;
+        }
+    }
+
+    @if sm==$res {
+        @media only screen and (min-width: #{map-get($mq, "sm")}) {
+            @content;
+        }
+    }
+
+    @if md==$res {
+        @media only screen and (min-width: #{map-get($mq, "md")}) {
+            @content;
+        }
+    }
+
+    @if lg==$res {
+        @media only screen and (min-width: #{map-get($mq, "lg")}) {
+            @content;
+        }
+    }
+
+    @if xl==$res {
+        @media only screen and (min-width: #{map-get($mq, "xl")}) {
+            @content;
+        }
+    }
+
+    @if huge==$res {
+        @media only screen and (min-width: #{map-get($mq, "huge")}) {
+            @content;
+        }
+    }
+}
+
+:root {
+    --font-family: neuzeit-grotesk, sans-serif;
+    --color-black: #1A191A;
+    --color-grey: #444243;
+    --color-navy: #1A3C51;
+    --color-green: #789F90;
+    --color-red: #B2502E;
+    --color-cream: #F5EADB;
+    --color-white: #FFF;
+
+    --type-base: 112.5%;
+    --type-xs: 0.778em;
+    --type-sm: 0.889em
+    --type-md: 1rem;
+    --type-lg: 1.333em;
+    --type-xl: 1.556em;
+    --type-xxl: 2em;
+    --type-xxxl: 2.444em;
+}
