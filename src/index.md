@@ -2,6 +2,17 @@
 layout: layouts/base.njk
 title: Contigo
 section: home
+slider:
+  - gallery_image: /assets/media/recess_contigo_1449.jpg
+    alt: Steak on a plate
+  - gallery_image: /assets/media/contigo-6-12.jpg
+    alt: Antler beer taps with someone pouring a beer.
+  - gallery_image: /assets/media/contigo-6.jpg
+    alt: Crispy green beans
+  - gallery_image: /assets/media/contigo-6-4.jpg
+    alt: Someone holding three canned cocktails
+  - gallery_image: /assets/media/contigo-6-6.jpg
+    alt: A bartender's hand expressing orange peel over a cocktail.
 site_intro:
   subhead: Welcome to Contigo
   content: >-
