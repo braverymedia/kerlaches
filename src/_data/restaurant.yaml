@@ -16,6 +16,3 @@ service_hours:
     hours: "Sun, Wed, Thur: 4-6pm"
 address: "2027 Anchor Lane, Austin, TX 78723"
 phone: "(512) 614-2260"
-menus:
-  service: Dinner Menu
-  menu_file: https://ucarecdn.com/c6de811a-9249-444e-a0f5-84a795ab3dcc/
