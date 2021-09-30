@@ -14,5 +14,3 @@ service_hours:
       Sun: 4–9pm
   - service: Happy Hour
     hours: "Sun, Wed, Thur: 4-6pm"
-address: "2027 Anchor Lane, Austin, TX 78723"
-phone: "(512) 614-2260"
