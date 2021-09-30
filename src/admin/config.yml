@@ -48,11 +48,17 @@ collections:
             widget: "list"
             allow_add: true
             fields:
+              - { label: "Content", name: "content", widget: markdown }
+              - label: "Image"
+                name: "card_image"
+                widget: image
+              - label: "Image Description"
+                name: alt
+                widget: string
               - label: "Image Placement"
                 name: "image_style"
                 widget: select
                 options: [ "Left", "Right", "Top" ]
-              - { label: "Content", name: "content", widget: markdown }
           - label: "Grid Gallery"
             name: "grid"
             widget: "list"
