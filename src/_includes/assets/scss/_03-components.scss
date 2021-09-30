@@ -1,0 +1,80 @@
+.cta {
+    display: flex;
+    margin: 16px 0;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid var(--button-color);
+    border-radius: var(--radius);
+    color: var(--button-color);
+    transition: all 150ms cubic-bezier(.075, .82, .165, 1);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--button-color);
+        color: var(--button-hover);
+    }
+}
+
+.location,
+.hours {
+    text-align: center;
+}
+
+.social {
+  width: 18px;
+  height: 18px;
+  margin-right: 16px;
+  margin-left: 16px;
+  transition: all 150ms cubic-bezier(.645, .045, .355, 1);
+  color: var(--color-black);
+}
+
+.contact-email {
+    color: var(--color-grey);
+    font-size: var(--type-sm);
+}
+
+// Nav
+.nav-overlay {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    @include mq(md) {
+        width: 70vw;
+    }
+    .nav-visible & {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+button.menu-trigger {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    right: auto;
+    bottom: auto;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-content: center;
+}
+

@@ -1,0 +1,41 @@
+p {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+a {
+    color: var(--color-red);
+    text-decoration: underline;
+}
+h2 {
+    font-size: var(--type-xl);
+    font-weight: 400;
+    @include mq(md) {
+        font-size: var(--type-xxl);
+    }
+}
+h3 {
+    font-size: var(--type-xl);
+    font-weight: 700;
+}
+
+h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 120%;
+}
+
+button,
+input,
+textarea,
+p {
+    font-size: inherit;
+    color: inherit;
+}
+.is-text-normal {
+    margin-top: 24px;
+    margin-bottom: 0px;
+    font-size: var(--type-md);
+}
+.is-type-sm {
+    font-size: var(--type-xs);
+}

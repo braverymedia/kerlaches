@@ -58,12 +58,16 @@ $mq: (
     --color-cream: #F5EADB;
     --color-white: #FFF;
 
-    --type-base: 112.5%;
-    --type-xs: 0.778em;
-    --type-sm: 0.889em
-    --type-md: 1rem;
-    --type-lg: 1.333em;
-    --type-xl: 1.556em;
-    --type-xxl: 2em;
-    --type-xxxl: 2.444em;
+    --type-base: 112.5%; // 18px;
+    --type-xs: 0.778em; // 14px
+    --type-sm: 0.889em // 16px;
+    --type-md: 1rem; // 18px
+    --type-lg: 1.333em; // 24px
+    --type-xl: 1.556em; // 28px
+    --type-xxl: 2em; // 36px
+    --type-xxxl: 2.444em; // 44px
+
+    --radius: 10px;
+    --button-color: var(--color-red);
+    --button-hover: var(--color-cream);
 }
