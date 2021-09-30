@@ -2,9 +2,6 @@
 layout: layouts/base.njk
 title: Contigo
 section: home
-slider:
-  gallery_image: /assets/media/recess_contigo_1449.jpg
-  alt: Steak on a plate
 site_intro:
   subhead: Welcome to Contigo
   content: >-
@@ -19,7 +16,4 @@ cards:
 
 
     We hope you will join us in the Beer Garden for dinner. We are taking great measures to ensure safety, and we hope we can serve you soon.
-grid:
-  gallery_image: /assets/media/recess_contigo_1449.jpg
-  alt: Steak on a plate
 ---
