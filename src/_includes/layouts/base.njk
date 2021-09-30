@@ -39,6 +39,22 @@
                 </section>
             {% endif %}
             {{ layoutContent | safe }}
+            <section class="content-cards">
+                {% for card in cards %}
+                    {% include "components/content-card.njk" %}
+                {% endfor %}
+            </section>
+            <section class="gallery-grid">
+                {% for item in grid %}
+                    {% include "components/gallery-grid.njk" %}
+                {% endfor %}
+                <footer>
+                    <p>Find us on Instagram<br>
+                        <a href="">@contigoaustin</a>
+                    </p>
+                </footer>
+            </section>
+            {% include "components/footer.njk" %}
         </main>
         <script>
             !function (t, o, c, k) {

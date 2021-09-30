@@ -1,0 +1,6 @@
+<article class="content-card layout-{{ card.image_style }}">
+    <figure><img src="{{ card.card_image }}" loading="lazy" width="383" height="422" alt="{{ card.alt }}"></figure>
+    <section>
+        {{ card.content | md | safe }}
+    </section>
+</article>
