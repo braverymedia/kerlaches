@@ -1,5 +1,6 @@
 const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
     // Disable automatic use of your .gitignore
@@ -15,6 +16,9 @@ module.exports = function (eleventyConfig) {
         "./src/admin/config.yml": "./admin/config.yml"
     });
 
+    eleventyConfig.addFilter("md", function (content = "") {
+        return markdownIt({ html: true }).render(content);
+    });
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
         if (outputPath.endsWith(".html")) {
