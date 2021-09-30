@@ -1,10 +1,15 @@
----
-site_title: "Contigo"
-site_description: "An East Austin restaurant modeled after our family's Texas ranch."
+site_title: Contigo
+site_description: An East Austin restaurant modeled after our family's Texas ranch.
+social:
+  instagram: https://instagram.com/contigoaustin
 banner:
   show_banner: false
   banner_copy: ""
   banner_link: ""
-reservations_widget: '<div id="Tock_widget_container" data-tock-display-mode="Button" data-tock-color-mode="White" data-tock-locale="en-us" data-tock-timezone="America/Chicago"></div>'
-order_link: "https://www.toasttab.com/contigo-austin/v3"
-gift_cards: "https://www.toasttab.com/contigo-austin/giftcards"
+reservations_widget: <div id="Tock_widget_container"
+  data-tock-display-mode="Button" data-tock-color-mode="White"
+  data-tock-locale="en-us" data-tock-timezone="America/Chicago"></div>
+order_link: https://www.toasttab.com/contigo-austin/v3
+gift_cards: https://www.toasttab.com/contigo-austin/giftcards
+location: 2027 Anchor Lane, Austin, TX 78723
+phone: (512) 614-2260
