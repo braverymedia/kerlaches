@@ -96,7 +96,7 @@ collections:
             widget: list
             fields:
               - label: "Image"
-                name: "gallery_image"
+                name: "Gallery Image"
                 widget: image
                 media_library:
                   config:
