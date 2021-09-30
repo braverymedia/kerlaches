@@ -55,7 +55,7 @@
     @include mq(md) {
         width: 70vw;
     }
-    .nav-visible & {
+    [data-menu-visible="true"] & {
         opacity: 1;
         visibility: visible;
     }
