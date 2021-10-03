@@ -1,3 +1,3 @@
 <figure class="grid-image">
-    <img src="{{ item.gallery_image }}" alt="{{ item.alt }}" loading="lazy"/>
+    {% image item.gallery_image, item.alt, "(min-width: 30em) 50vw, 100vw" %}
 </figure>

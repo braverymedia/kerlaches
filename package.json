@@ -34,6 +34,7 @@
   "homepage": "https://github.com/joelgoodman/contigoatx#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-img": "^0.10.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "autoprefixer": "^10.3.4",

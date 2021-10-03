@@ -1,6 +1,30 @@
 const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
+const Image = require("@11ty/eleventy-img");
+
+// thanks @zachleat
+async function imageShortcode(attrs = {}, options = {}) {
+  options = Object.assign({},{
+    widths: [null],
+    formats: process.env.ELEVENTY_PRODUCTION ? ["avif", "webp", "jpeg"] : ["webp", "jpeg"],
+    urlPath: "/_includes/assets/media/",
+    outputDir: "./_site/assets/media/",
+    sharpAvifOptions: {},
+  }, options);
+
+  let metadata = await Image(attrs.src || attrs.path, options);
+
+  let imageAttributes = Object.assign({
+    loading: "lazy",
+    decoding: "async",
+  }, attrs);
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: "inline"
+  });
+}
 
 module.exports = function (eleventyConfig) {
     // Disable automatic use of your .gitignore
@@ -19,6 +43,19 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
     });
+
+    eleventyConfig.addFilter("twitterUsernameFromUrl", (url) => {
+		if( url.indexOf("https://twitter.com/") > -1 ) {
+			return "@" + url.replace("https://twitter.com/", "");
+		}
+		return url;
+	});
+
+    // Image shortcodes
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+    eleventyConfig.addLiquidShortcode("image", imageShortcode);
+    eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
         if (outputPath.endsWith(".html")) {
