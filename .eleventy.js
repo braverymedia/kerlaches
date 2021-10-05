@@ -1,31 +1,12 @@
 const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
-const Image = require("@11ty/eleventy-img");
+const getImageSize = require("image-size");
 
-// thanks @zachleat
-async function imageShortcode(attrs = {}, options = {}) {
-  options = Object.assign({},{
-    widths: [null],
-    formats: process.env.ELEVENTY_PRODUCTION ? ["avif", "webp", "jpeg"] : ["webp", "jpeg"],
-    urlPath: "/_includes/assets/media/",
-    outputDir: "./_site/assets/media/",
-    sharpAvifOptions: {},
-  }, options);
-
-  let metadata = await Image(attrs.src || attrs.path, options);
-
-  let imageAttributes = Object.assign({
-    loading: "lazy",
-    decoding: "async",
-  }, attrs);
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes, {
-    whitespaceMode: "inline"
-  });
+let imgConfig = {
+    "breakpoints": [ 375, 768, 1024, 1360, 1600, 1980 ],
+    "resize": "fit"
 }
-
 module.exports = function (eleventyConfig) {
     // Disable automatic use of your .gitignore
     eleventyConfig.setUseGitIgnore(false);
@@ -36,25 +17,44 @@ module.exports = function (eleventyConfig) {
     );
 
     // Copy Static Files to /_Site
-    eleventyConfig.addPassthroughCopy({
-        "./src/admin/config.yml": "./admin/config.yml"
-    });
+    eleventyConfig
+        .addPassthroughCopy({
+            "./src/admin/config.yml": "./admin/config.yml"
+        })
+        .addPassthroughCopy({
+            "./src/_includes/assets/media": "/assets/media"
+        });
 
     eleventyConfig.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
     });
 
-    eleventyConfig.addFilter("twitterUsernameFromUrl", (url) => {
-		if( url.indexOf("https://twitter.com/") > -1 ) {
-			return "@" + url.replace("https://twitter.com/", "");
+    eleventyConfig.addFilter("instaUsernameFromUrl", (url) => {
+		if( url.indexOf("https://instagram.com/") > -1 ) {
+			return "@" + url.replace("https://instagram.com/", "");
 		}
 		return url;
 	});
 
     // Image shortcodes
-    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-    eleventyConfig.addLiquidShortcode("image", imageShortcode);
-    eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+    eleventyConfig.addNunjucksShortcode("img", (src, alt, w = null, h = null, breakpoints = null ) => {
+        let imgSize = getImageSize('./src/_includes' + src);
+        let srcWidths = [];
+        let srcset;
+        if ( !w || !h ){
+            w = imgSize.width;
+            h = imgSize.height;
+        }
+        if (!breakpoints) {
+            breakpoints = imgConfig.breakpoints;
+        }
+        for( const [key, value] of Object.entries(breakpoints) ) {
+            let set = `${src}?nf_resize=${imgConfig.resize}&w=${value} ${value}w`;
+            srcWidths.push(set);
+        }
+        srcset = srcWidths.join(', ');
+        return `<img src="${src}?nf_resize=${imgConfig.resize}" alt="${alt}" width="${ w }" height="${ h }" srcset="${srcset}" />`;
+    });
 
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

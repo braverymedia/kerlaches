@@ -1,5 +1,5 @@
 <article class="content-card layout-{{ card.image_style }}">
-    <figure>{% image card.card_image, card.alt, "(min-width: 30em) 50vw, 100vw" %}</figure>
+    <figure>{% img card.card_image, card.alt %}</figure>
     <section>
         {{ card.content | md | safe }}
     </section>
