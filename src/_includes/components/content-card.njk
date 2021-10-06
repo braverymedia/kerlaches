@@ -1,5 +1,14 @@
-<article class="content-card layout-{{ card.image_style }}">
-    <figure>{% img card.card_image, card.alt %}</figure>
+{% if layout != "top" %}
+    {% set width = "385" %}
+    {% set height = "420" %}
+    {% set resize = "smartcrop" %}
+{% else %}
+    {% set width = "385" %}
+    {% set height = "255" %}
+    {% set resize = "smartcrop" %}
+{% endif %}
+<article class="content-card layout-{{ layout }}">
+    <figure>{% img card.card_image, card.alt, width, height, resize %}</figure>
     <section>
         {{ card.content | md | safe }}
     </section>

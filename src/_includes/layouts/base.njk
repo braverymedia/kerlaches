@@ -15,6 +15,13 @@
             {{ layoutContent | safe }}
             <section class="content-cards">
                 {% for card in cards %}
+                    {% set layout = card.image_style %}
+                    {% include "components/content-card.njk" %}
+                {% endfor %}
+            </section>
+            <section class="content-cards content--columns">
+                {% for card in cards %}
+                    {% set layout = "top" %}
                     {% include "components/content-card.njk" %}
                 {% endfor %}
             </section>

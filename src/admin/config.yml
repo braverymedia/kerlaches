@@ -58,7 +58,19 @@ collections:
               - label: "Image Placement"
                 name: "image_style"
                 widget: select
-                options: [ "Left", "Right", "Top" ]
+                options: [ "Left", "Right" ]
+          - label: "Content Columns"
+            name: "column-cards"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Content", name: "content", widget: markdown }
+              - label: "Image"
+                name: "card_image"
+                widget: image
+              - label: "Image Description"
+                name: alt
+                widget: string
           - label: "Grid Gallery"
             name: "grid"
             widget: "list"

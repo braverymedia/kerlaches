@@ -1,7 +1,6 @@
 const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
-const getImageSize = require("image-size");
 
 let imgConfig = {
     "breakpoints": [ 375, 768, 1024, 1360, 1600, 1980 ],
@@ -37,8 +36,7 @@ module.exports = function (eleventyConfig) {
 	});
 
     // Image shortcodes
-    eleventyConfig.addNunjucksShortcode("img", (src, alt, w = null, h = null, breakpoints = null ) => {
-        let imgSize = getImageSize(`https://contigoatx.netlify.app${src}`);
+    eleventyConfig.addNunjucksShortcode("img", (src, alt, w = null, h = null, resize = imgConfig.resize, breakpoints = null ) => {
         let srcWidths = [];
         let srcset;
         if ( !w || !h ){
@@ -49,11 +47,11 @@ module.exports = function (eleventyConfig) {
             breakpoints = imgConfig.breakpoints;
         }
         for( const [key, value] of Object.entries(breakpoints) ) {
-            let set = `${src}?nf_resize=${imgConfig.resize}&w=${value} ${value}w`;
+            let set = `${src}?nf_resize=${resize}&w=${value} ${value}w`;
             srcWidths.push(set);
         }
         srcset = srcWidths.join(', ');
-        return `<img src="${src}?nf_resize=${imgConfig.resize}" alt="${alt}" width="${ w }" height="${ h }" srcset="${srcset}" />`;
+        return `<img src="${src}?nf_resize=${resize}&w=${w}" alt="${alt}" width="${ w }" height="${ h }" srcset="${srcset}" />`;
     });
 
     // Minify HTML
