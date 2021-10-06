@@ -47,11 +47,11 @@ module.exports = function (eleventyConfig) {
             breakpoints = imgConfig.breakpoints;
         }
         for( const [key, value] of Object.entries(breakpoints) ) {
-            let set = `${src}?nf_resize=${resize}&w=${value} ${value}w`;
+            let set = `${src}?nf_resize=${resize}&w=${value}&h=${h} ${value}w`;
             srcWidths.push(set);
         }
         srcset = srcWidths.join(', ');
-        return `<img src="${src}?nf_resize=${resize}&w=${w}" alt="${alt}" width="${ w }" height="${ h }" srcset="${srcset}" />`;
+        return `<img src="${src}?nf_resize=${resize}&w=${w}&h=${h}" alt="${alt}" width="${ w }" height="${ h }" srcset="${srcset}" />`;
     });
 
     // Minify HTML
