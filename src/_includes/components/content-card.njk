@@ -8,7 +8,9 @@
     {% set resize = "smartcrop" %}
 {% endif %}
 <article class="content-card layout-{{ layout }}">
-    <figure>{% img card.card_image, card.alt, width, height, resize %}</figure>
+    <figure>
+        <img src="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ card.alt }}" sizes="(max-width: 840px) 100vw, 840px" srcset="{{ card.card_image }}?nf_resize=smartcrop&w=350&h=233 350w, {{ card.card_image }}?nf_resize=smartcrop&w=722&h=481 722w, {{ card.card_image }}?nf_resize=smartcrop&w=1006&h=670 1006w, {{ card.card_image }}?nf_resize=smartcrop&w=1244&h=829 1244w"/>
+    </figure>
     <section>
         {{ card.content | md | safe }}
     </section>
