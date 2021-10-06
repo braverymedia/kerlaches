@@ -37,21 +37,12 @@ cards:
     card_image: /assets/media/img_7198-1280x853.jpg
     alt: A burger and fries with a pint of beer.
     image_style: Left
-  - content: |-
-      ### Gift Cards
-
-      Give someone the gift of a great meal with a Contigo gift card.
-
-      [Purchase gift cards](https://www.toasttab.com/contigo-austin/giftcards)
-    image_style: Top
-    alt: Contigo Gift Cards
-    card_image: /assets/media/contigo-6.jpg
 column-cards:
   - content: >-
       ### Book our space
 
 
-      Learn more about booking our space for your next private event. 
+      Learn more about booking our space for your next private event.
 
 
       [Contact Us](https://austinvenuecollective.tripleseat.com/party_request/17859)
