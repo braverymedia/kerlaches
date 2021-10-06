@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
 
     // Image shortcodes
     eleventyConfig.addNunjucksShortcode("img", (src, alt, w = null, h = null, breakpoints = null ) => {
-        let imgSize = getImageSize(src);
+        let imgSize = getImageSize(`https://contigoatx.netlify.com${src}`);
         let srcWidths = [];
         let srcset;
         if ( !w || !h ){
