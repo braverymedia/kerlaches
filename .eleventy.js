@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
 
     // Image shortcodes
     eleventyConfig.addNunjucksShortcode("img", (src, alt, w = null, h = null, breakpoints = null ) => {
-        let imgSize = getImageSize('./src/_includes' + src);
+        let imgSize = getImageSize(src);
         let srcWidths = [];
         let srcset;
         if ( !w || !h ){
