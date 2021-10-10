@@ -18,12 +18,14 @@
     }
 }
 // Tock
-.TockButtonWidgetContainer {
-    width: 100% !important;
-    .TockLogo-container {
-        display: none !important;
-    }
-    .TockButton {
+#Tock_widget_container {
+    .TockButtonWidgetContainer {
+        width: 100% !important;
+        .TockLogo-container {
+            display: none !important;
+        }
+        .TockButton {
+            background-color: transparent !important;
             display: flex;
             margin: 16px 0;
             padding: 15px 0;
@@ -32,21 +34,22 @@
             align-content: center;
             border: 1px solid var(--button-color);
             border-radius: var(--radius);
-            color: var(--button-color);
+            color: var(--button-color) !important;
             transition: all 150ms cubic-bezier(.075, .82, .165, 1);
             font-weight: 700;
             text-align: center;
             text-decoration: none;
             font-family: inherit;
             &:hover {
-                background-color: var(--button-color);
-                color: var(--button-hover);
+                background-color: var(--button-color) !important;
+                color: var(--button-hover) !important;
             }
+        }
     }
-}
-.TockButton-buttonContainer {
-    width: 100%;
-    height: auto;
+    .TockButton-buttonContainer {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .location,
