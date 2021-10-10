@@ -17,6 +17,37 @@
         color: var(--button-hover);
     }
 }
+// Tock
+.TockButtonWidgetContainer {
+    width: 100% !important;
+    .TockLogo-container {
+        display: none !important;
+    }
+    .TockButton {
+            display: flex;
+            margin: 16px 0;
+            padding: 15px 0;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            border: 1px solid var(--button-color);
+            border-radius: var(--radius);
+            color: var(--button-color);
+            transition: all 150ms cubic-bezier(.075, .82, .165, 1);
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            font-family: inherit;
+            &:hover {
+                background-color: var(--button-color);
+                color: var(--button-hover);
+            }
+    }
+}
+.TockButton-buttonContainer {
+    width: 100%;
+    height: auto;
+}
 
 .location,
 .hours {
