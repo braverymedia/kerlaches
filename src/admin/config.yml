@@ -91,8 +91,8 @@ collections:
     editor:
       preview: false
     files:
-      - name: "settings"
-        label: "Global Settings"
+      - label: "Global Settings"
+        name: "details"
         file: "src/_data/settings.yaml"
         fields:
           - { label: "Site Title", name: site_title, widget: string }
@@ -118,13 +118,13 @@ collections:
                 options:
                   - { label: "Banner", value: "default" }
                   - { label: "Fullscreen", value: "full" }
-          - { label: "Reservations Widget", name: "reservations_widget", widget: text }
+          - { label: "Reservations Widget", name: "reservations_widget", widget: code, default_language: "html", output_code_only: true}
           - { label: "Online Ordering Link", name: "order_link", widget: string }
           - { label: "Gift Cards Link", name: "gift_cards", widget: string }
           - { label: Address, name: location, widget: string }
           - { label: "Phone Number", name: phone, widget: string }
       - label: "Restaurant Details"
-        name: "header"
+        name: "restaurant"
         file: "src/_data/restaurant.yaml"
         fields:
           - label: "Buttons"

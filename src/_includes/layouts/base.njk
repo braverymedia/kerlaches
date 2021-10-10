@@ -6,6 +6,27 @@
     <body data-menu-open="false">
         {% include "components/header.njk" %}
         <main>
+            <section id="slider">
+                <figure class="slideshow">
+                    {% for item in slider %}
+                        {% include "components/gallery-slide.njk" %}
+                    {% endfor %}
+                </figure>
+                <div class="slide-pager"></div>
+            </section>
+            <div class="button-group default-margins">
+                {% for button in restaurant.cta %}
+                    {% if button.action == "reservations" %}
+                        {{ details.reservations_widget | safe }}
+                    {% endif %}
+                    {% if button.action == "order" %}
+                        <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>
+                    {% endif %}
+                    {% if button.action == "gift-card" %}
+                        <a href="{{ settings.gift_cards }}" class="cta">{{ button.label }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
             {% if site_intro %}
                 <section id="intro" class="default-margins">
                     <div class="subhead is-text-md">{{ site_intro.subhead }}</div>
@@ -13,19 +34,19 @@
                 </section>
             {% endif %}
             {{ layoutContent | safe }}
-            <section class="content-cards">
+            <section class="content-cards default-margins">
                 {% for card in cards %}
                     {% set layout = card.image_style %}
                     {% include "components/content-card.njk" %}
                 {% endfor %}
             </section>
-            <section class="content-cards content--columns">
+            <section class="content-cards content--columns default-margins">
                 {% for card in cards %}
                     {% set layout = "top" %}
                     {% include "components/content-card.njk" %}
                 {% endfor %}
             </section>
-            <section class="gallery-grid">
+            <section class="gallery-grid default-margins">
                 {% for item in grid %}
                     {% include "components/gallery-grid.njk" %}
                 {% endfor %}

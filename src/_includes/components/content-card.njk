@@ -9,7 +9,7 @@
 {% endif %}
 <article class="content-card layout-{{ layout }}">
     <figure>
-        <img src="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ card.alt }}" srcset="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x, {{ card.card_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x"/>
+        <img src="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ card.alt }}" srcset="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x, {{ card.card_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x" width="{{ width }}" height="{{ height }}"/>
     </figure>
     <section>
         {{ card.content | md | safe }}

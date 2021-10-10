@@ -35,25 +35,6 @@ module.exports = function (eleventyConfig) {
 		return url;
 	});
 
-    // Image shortcodes
-    eleventyConfig.addNunjucksShortcode("img", (src, alt, w = null, h = null, resize = imgConfig.resize, breakpoints = null ) => {
-        let srcWidths = [];
-        let srcset;
-        if ( !w || !h ){
-            w = imgSize.width;
-            h = imgSize.height;
-        }
-        if (!breakpoints) {
-            breakpoints = imgConfig.breakpoints;
-        }
-        for( const [key, value] of Object.entries(breakpoints) ) {
-            let set = `${src}?nf_resize=${resize}&w=${value}&h=${h} ${value}w`;
-            srcWidths.push(set);
-        }
-        srcset = srcWidths.join(', ');
-        return `<img src="${src}?nf_resize=${resize}&w=${w}&h=${h}" alt="${alt}" width="${ w }" height="${ h }" srcset="${srcset}" />`;
-    });
-
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
         if (outputPath.endsWith(".html")) {

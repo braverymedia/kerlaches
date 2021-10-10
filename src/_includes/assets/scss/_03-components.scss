@@ -67,15 +67,32 @@ button.menu-trigger {
     border: 0;
     padding: 0;
     box-shadow: none;
+    color: var(--color-black);
     margin: 0;
     position: absolute;
     left: 16px;
-    top: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     right: auto;
     bottom: auto;
     width: 40px;
     height: 40px;
     display: flex;
-    align-content: center;
+    align-items: center;
+    > svg {
+        width: 100%;
+    }
 }
 
+#slider {
+    height: calc(80vh - 85px);
+    overflow: hidden;
+    > .slideshow {
+        height: 100%;
+        img {
+            height: 100%;
+            width: auto;
+            max-width: none;
+        }
+    }
+}
