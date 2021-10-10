@@ -97,9 +97,9 @@
     </section>
     <section class="contigo-details">
         <div class="button-group">
-            {% for button in settings.header.cta %}
+            {% for button in restaurant.cta %}
                 {% if button.action == "reservations" %}
-                    {{ settings.details.reservations_widget }}
+                    {{ settings.reservations_widget | safe }}
                 {% endif %}
                 {% if button.action == "order" %}
                     <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>

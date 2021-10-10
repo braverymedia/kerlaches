@@ -17,13 +17,10 @@
             <div class="button-group default-margins">
                 {% for button in restaurant.cta %}
                     {% if button.action == "reservations" %}
-                        {{ details.reservations_widget | safe }}
+                        {{ settings.reservations_widget | safe }}
                     {% endif %}
                     {% if button.action == "order" %}
                         <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>
-                    {% endif %}
-                    {% if button.action == "gift-card" %}
-                        <a href="{{ settings.gift_cards }}" class="cta">{{ button.label }}</a>
                     {% endif %}
                 {% endfor %}
             </div>
