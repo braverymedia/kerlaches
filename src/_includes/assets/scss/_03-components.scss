@@ -122,12 +122,44 @@ button.menu-trigger {
 #slider {
     height: calc(80vh - 85px);
     overflow: hidden;
-    > .slideshow {
+    .slideshow {
         height: 100%;
         img {
             height: 100%;
             width: auto;
             max-width: none;
+            object-fit: cover;
         }
     }
+    .glide__track {
+        height: 100%;
+        width: 100%;
+    }
+    .pager {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 6px 0px;
+        color: var(--color-cream);
+        font-size: 12px;
+        position: absolute;
+        width: 47px;
+        height: 21px;
+        right: 8px;
+        bottom: 8px;
+
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(4px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 4px;
+    }
+}
+// "menu" stuff.
+.contigo-details {
+    visibility: hidden;
+    opacity: 0;
+    height: calc(100vh - 85px);
+    overflow: scroll;
 }

@@ -109,5 +109,12 @@
                 {% endif %}
             {% endfor %}
         </div>
-    </section>
-</header>
+        <div class="hours">
+            {% for shift in restaurant.service_hours %}
+                <h2>{{ shift.service }}
+                </h2>
+                <p>{{ shift.hours }}<p>
+                    {% endfor %}
+                </div>
+            </section>
+        </header>

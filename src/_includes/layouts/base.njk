@@ -6,13 +6,15 @@
     <body data-menu-open="false">
         {% include "components/header.njk" %}
         <main>
-            <section id="slider">
-                <figure class="slideshow">
-                    {% for item in slider %}
-                        {% include "components/gallery-slide.njk" %}
-                    {% endfor %}
-                </figure>
-                <div class="slide-pager"></div>
+            <section id="slider" class="glide">
+                <div data-glide-el="track" class="glide__track">
+                    <figure class="slideshow glide__slides">
+                        {% for item in slider %}
+                            {% include "components/gallery-slide.njk" %}
+                        {% endfor %}
+                    </figure>
+                </div>
+                <span class="pager"></span>
             </section>
             <div class="button-group default-margins">
                 {% for button in restaurant.cta %}
@@ -38,7 +40,7 @@
                 {% endfor %}
             </section>
             <section class="content-cards content--columns default-margins">
-                {% for card in cards %}
+                {% for card in column_cards %}
                     {% set layout = "top" %}
                     {% include "components/content-card.njk" %}
                 {% endfor %}
@@ -77,6 +79,7 @@
             }(window, document, 'script', 'https://www.exploretock.com/tock.js');
             tock('init', 'contigo');
         </script>
+        <script src="assets/js/contigo.bundle.js"></script>
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </body>
 </html>

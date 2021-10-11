@@ -57,6 +57,8 @@
     "terser": "^5.8.0"
   },
   "dependencies": {
-    "netlify-cms-app": "^2.15.44"
+    "@glidejs/glide": "^3.4.1",
+    "netlify-cms-app": "^2.15.44",
+    "zooming": "^2.1.1"
   }
 }

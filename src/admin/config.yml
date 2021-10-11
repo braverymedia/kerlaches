@@ -60,7 +60,7 @@ collections:
                 widget: select
                 options: [ "Left", "Right" ]
           - label: "Content Columns"
-            name: "column-cards"
+            name: "column_cards"
             widget: "list"
             allow_add: true
             fields:
@@ -147,10 +147,4 @@ collections:
             fields:
               - { label: "Service", name: "service", widget: "string" }
               - { label: "Hours", name: "hours", widget: "text" }
-          - label: "Menus"
-            name: "menus"
-            widget: list
-            allow_add: true
-            fields:
-              - { label: "Service Name", name: "service", widget: string }
               - { label: "Upload Menu", name: "menu_file", widget: file }

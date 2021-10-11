@@ -37,7 +37,7 @@ cards:
     card_image: /assets/media/img_7198-1280x853.jpg
     alt: A burger and fries with a pint of beer.
     image_style: Left
-column-cards:
+column_cards:
   - content: >-
       ### Book our space
 
