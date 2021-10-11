@@ -21,6 +21,12 @@
 #Tock_widget_container {
     .TockButtonWidgetContainer {
         width: 100% !important;
+        display: unset !important;
+        .TockButton-buttonContainer {
+            width: 100% !important;
+            line-height: inherit !important;
+            border-radius: unset !important;
+        }
         .TockLogo-container {
             display: none !important;
         }
@@ -28,28 +34,25 @@
             background-color: transparent !important;
             cursor: pointer;
             display: flex;
-            margin: 16px 0;
+            margin: 0 !important;
             padding: 15px 0;
             justify-content: center;
             align-items: center;
             align-content: center;
-            border: 1px solid var(--button-color);
-            border-radius: var(--radius);
+            border: 1px solid var(--button-color) !important;
+            border-radius: var(--radius) !important;
             color: var(--button-color) !important;
             transition: all 150ms cubic-bezier(.075, .82, .165, 1);
             font-weight: 700;
             text-align: center;
             text-decoration: none;
             font-family: inherit;
+            height: auto !important;
             &:hover {
                 background-color: var(--button-color) !important;
                 color: var(--button-hover) !important;
             }
         }
-    }
-    .TockButton-buttonContainer {
-        width: 100%;
-        height: auto;
     }
 }
 
