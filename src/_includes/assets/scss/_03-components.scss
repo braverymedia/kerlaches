@@ -52,10 +52,11 @@
                 background-color: var(--button-color) !important;
                 color: var(--button-hover) !important;
             }
-            >span {
+            >span[class^="TockWidget"] {
                 font-weight: 700 !important;
                 font-size: 1rem !important;
                 line-height: inherit !important;
+                font-family: var(--font-family) !important;
             }
         }
     }
