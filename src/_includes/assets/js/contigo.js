@@ -1,5 +1,5 @@
-import Zooming from 'zooming'
-import Glide from '@glidejs/glide'
+import Zooming from 'zooming';
+import Glide from '@glidejs/glide';
 
 // image lightbox zooming
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,7 +19,12 @@ const CustomLength = function(Glide, Components, Events) {
     }
   }
 }
-const slider = new Glide('.glide', { gap: 0 })
+const slider = new Glide('.glide', {
+  gap: 0,
+  type: 'carousel',
+  perView: 1,
+  autoplay: 6000
+})
 const pager = document.querySelector('.pager');
 let totalSlides;
 slider.on(['slider.length'], (length) => {
@@ -27,7 +32,8 @@ slider.on(['slider.length'], (length) => {
 })
 
 slider.on(['mount.after', 'run'], () => {
-    pager.innerText = slider.index + ' of ' + totalSlides;
+    const page = parseInt(slider.index, 10) + 1;
+    pager.innerText = page + ' of ' + totalSlides;
 })
 slider.mount({
   CustomLength

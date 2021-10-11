@@ -39,3 +39,7 @@ p {
 .is-type-sm {
     font-size: var(--type-xs);
 }
+
+#intro h2 {
+    max-width: 540px;
+}
