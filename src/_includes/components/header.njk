@@ -113,8 +113,13 @@
             {% for shift in restaurant.service_hours %}
                 <h2>{{ shift.service }}
                 </h2>
-                <p>{{ shift.hours }}<p>
-                    {% endfor %}
-                </div>
-            </section>
-        </header>
+                <p>{{ shift.hours }}
+                    {% if shift.menu_file %}
+                        <br/>
+                        <a href="{{ shift.menu_file }}" class="menu">{{ shift.service }} Menu</a>
+                    {% endif %}
+                </p>
+            {% endfor %}
+        </div>
+    </section>
+</header>

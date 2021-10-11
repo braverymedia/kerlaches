@@ -147,4 +147,4 @@ collections:
             fields:
               - { label: "Service", name: "service", widget: "string" }
               - { label: "Hours", name: "hours", widget: "text" }
-              - { label: "Upload Menu", name: "menu_file", widget: file }
+              - { label: "Upload Menu", name: "menu_file", widget: file, required: false }
