@@ -32,6 +32,32 @@ main {
     @include mq(md) {
         width: 70vw;
         border-right: 1px solid var(--color-black);
+        .button-group {
+            display: none;
+        }
+        & > section:not(#slider) {
+            max-width: calc(790px);
+            width: 100%;
+            margin-left:auto;
+            margin-right: auto;
+        }
+    }
+}
+
+#site-header {
+    height: 85px;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    @include mq(md) {
+        width: 30vw;
+        position: fixed;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: var(--color-cream);
+        padding-top: 32px;
     }
 }
 
@@ -71,13 +97,6 @@ main {
 .column {
     overflow: visible;
 }
-
-#site-header {
-    height: 85px;
-    max-height: 100vh;
-    position: sticky;
-    top: 0;
-}
 .site-title {
     background-color: var(--color-cream);
     border-bottom: 1px solid var(--color-black);
@@ -95,6 +114,10 @@ main {
             width: auto;
         }
     }
+    @include mq(md) {
+        position: static;
+        border-bottom: 0;
+    }
 }
 .subhead + h2 {
     margin-top: 8px;
@@ -107,8 +130,67 @@ main {
         margin-left: -20px;
         margin-right: -20px;
     }
+    @include mq(md) {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        > figure {
+            margin-left: unset;
+            margin-right: unset;
+            flex: 1;
+        }
+        > section {
+            flex: 1;
+        }
+        h3 {
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 68px;
+                background-color: currentColor;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translateY(-24px);
+            }
+        }
+        &.layout-Right {
+            flex-direction: row-reverse;
+        }
+        &.layout-Left,
+        &.layout-Right {
+                > figure {
+                    width: 383px;
+                    height: 422px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+        }
+        &.layout-top {
+            flex-direction: column;
+            flex: 1;
+            > figure {
+                max-width: 100%;
+                width: 385px;
+                height: 255px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
-
+.content--columns {
+    display: flex;
+    gap: 24px;
+}
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
