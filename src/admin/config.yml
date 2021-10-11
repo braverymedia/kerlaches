@@ -146,5 +146,5 @@ collections:
             allow_add: true
             fields:
               - { label: "Service", name: "service", widget: "string" }
-              - { label: "Hours", name: "hours", widget: "text" }
+              - { label: "Hours", name: "hours", widget: "markdown" }
               - { label: "Upload Menu", name: "menu_file", widget: file, required: false }
