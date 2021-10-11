@@ -1,5 +1,5 @@
 {% set width = "320" %}
 {% set height = "512" %}
 <figure class="grid-image">
-    <img src="{{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ item.alt }}" srcset="{{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x, {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x" width="{{ width }}" height="{{ height }}" class="img-zoomable"/>
+    <img src="{{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ item.alt }}" srcset="{{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x, {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x" width="{{ width }}" height="{{ height }}" class="img-zoomable" loading="lazy"/>
 </figure>

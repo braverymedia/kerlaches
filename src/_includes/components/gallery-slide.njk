@@ -1,7 +1,7 @@
 {% set width = "1000" %}
 {% set height = "1000" %} <img src="{{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ item.alt }}" srcset="
-            {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width / 3 }}&h={{ height / 3 }} 300w,
-            {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width * 0.25 }}&h={{ height * 0.25 }} 750w,
-            {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1000w,
-            {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x,
-            {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x" width="{{ width }}" height="{{ height }}" class="glide__slide"/>
+                {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width / 3 }}&h={{ height / 3 }} 300w,
+                {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width * 0.25 }}&h={{ height * 0.25 }} 750w,
+                {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1000w,
+                {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x,
+                {{ item.gallery_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x" width="{{ width }}" height="{{ height }}" class="glide__slide" loading="lazy"/>
