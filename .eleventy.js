@@ -35,6 +35,19 @@ module.exports = function (eleventyConfig) {
 		return url;
 	});
 
+    eleventyConfig.addFilter("phone", (number) => {
+        const linkReady = number.replace(/[^\d]/g, '');
+
+        return `<a href="tel:+1${linkReady}" class="phone-number" title="Call us">${number}</a>`;
+    })
+
+    eleventyConfig.addFilter("gmapLink", (address) => {
+        const gmap = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
+        return gmap;
+
+    });
+
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
         if (outputPath.endsWith(".html")) {

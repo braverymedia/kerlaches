@@ -192,3 +192,10 @@ button.menu-trigger {
         margin-top: 0;
     }
 }
+.contact {
+    text-align: center;
+    > a {
+        display: block;
+        margin-bottom: 8px;
+    }
+}

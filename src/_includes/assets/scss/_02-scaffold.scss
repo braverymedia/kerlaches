@@ -58,6 +58,9 @@ main {
         bottom: 0;
         background-color: var(--color-cream);
         padding-top: 32px;
+        padding-bottom: 32px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -198,7 +201,10 @@ main {
     gap: 12px;
     footer {
         text-align: center;
-        grid-column: 1 / 3;
+        grid-column: 1 / -1;
+    }
+    @include mq(lg) {
+        grid-template-columns: repeat( 3, 1fr );
     }
 }
 .grid-image {
