@@ -12,5 +12,6 @@ service_hours:
     hours: |-
       Wed–Sat: 4–10pm
       Sun: 4–9pm
+    menu_file: /assets/media/contigo-menu-08.20.21.pdf
   - service: Happy Hour
     hours: "Sun, Wed, Thur: 4-6pm"
