@@ -42,6 +42,9 @@ main {
             margin-right: auto;
         }
     }
+    @include mq(huge) {
+        width: 80vw;
+    }
 }
 
 #site-header {
@@ -62,12 +65,8 @@ main {
         display: flex;
         flex-direction: column;
     }
-}
-
-.cover-gallery {
-    height: 65vh;
-    @include mq(md) {
-        height: 85vh;
+    @include mq(huge) {
+        width: 20vw;
     }
 }
 .subhead {

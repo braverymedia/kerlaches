@@ -1,6 +1,20 @@
 import Zooming from 'zooming';
 import Glide from '@glidejs/glide';
 
+const menuTrigger = document.querySelector('.menu-trigger');
+const pager = document.querySelector('.pager');
+
+if ( menuTrigger ) {
+  menuTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    if ( document.body.dataset.menuOpen === "false" ) {
+      document.body.dataset.menuOpen = "true"
+    } else {
+      document.body.dataset.menuOpen = "false"
+    }
+  })
+}
+
 // image lightbox zooming
 document.addEventListener('DOMContentLoaded', function () {
   const zooming = new Zooming({
@@ -25,7 +39,7 @@ const slider = new Glide('.glide', {
   perView: 1,
   autoplay: 6000
 })
-const pager = document.querySelector('.pager');
+
 let totalSlides;
 slider.on(['slider.length'], (length) => {
   totalSlides = length

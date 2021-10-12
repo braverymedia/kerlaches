@@ -1,0 +1,13 @@
+[data-menu-open='true'] {
+    #site-header,
+    .site-title {
+        background-color: var(--color-navy);
+        color: var(--color-cream);
+        a {
+            color: var(--color-cream);
+        }
+        .cta {
+            border-color: var(--color-cream)
+        }
+    }
+}

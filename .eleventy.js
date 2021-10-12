@@ -63,10 +63,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.setBrowserSyncConfig({
-        ghostMode: {
-            clicks: false,
-            scroll: false
-        }
+        ghostMode: false
     });
 
     // Let Eleventy transform HTML files as nunjucks

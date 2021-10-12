@@ -111,7 +111,7 @@ button.menu-trigger {
     border: 0;
     padding: 0;
     box-shadow: none;
-    color: var(--color-black);
+    color: inherit;
     margin: 0;
     position: absolute;
     left: 16px;
@@ -168,6 +168,12 @@ button.menu-trigger {
         /* Note: backdrop-filter has minimal browser support */
 
         border-radius: 4px;
+    }
+    @include mq(md) {
+        height: 82vh;
+    }
+    @include mq(huge) {
+        height: 100vh;
     }
 }
 // "menu" stuff.

@@ -1,0 +1,40 @@
+<section class="ctx-overlay">
+    <article class="accordion">
+        <h2>
+            <button data-action="toggle" aria-controls="menus-exp" aria-expanded="false">
+                <span class="indicator">+</span>
+                Menus
+            </button>
+        </h2>
+        <div id="menus-exp" aria-hidden="true" class="hours">
+            {% for shift in restaurant.service_hours %}
+                <h3>{{ shift.service }}
+                </h3>
+                {{ shift.hours | md | safe }}
+                {% if shift.menu_file %}
+                    <a href="{{ shift.menu_file }}" class="menu">{{ shift.service }} Menu</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <h2>
+            <button data-action="toggle" aria-controls="location-exp" aria-expanded="false">
+                <span class="indicator">+</span>
+                Find Us
+            </button>
+        </h2>
+        <div id="location-exp" aria-hidden="true">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.216308829801!2d-97.7055990485327!3d30.287903113894266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5e360b7547d%3A0xf4a0d23a9a83896b!2sContigo!5e0!3m2!1sen!2sus!4v1634066687460!5m2!1sen!2sus"
+                width="400"
+                height="300"
+                style="border:0;"
+                allowfullscreen="true"
+                loading="lazy"></iframe>
+            <address>
+                {% if settings.location %}
+                    <a href="{{ settings.location | gmapLink }}" title="Get directions">{{ settings.location }}</a>
+                {% endif %}
+            </address>
+        </div>
+    </article>
+</section>
