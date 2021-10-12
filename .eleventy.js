@@ -48,6 +48,10 @@ module.exports = function (eleventyConfig) {
 
     });
 
+    eleventyConfig.addFilter("ariaExpander", (name) => {
+        return `${name.replace(/\s+/g, '-').toLowerCase()}-exp`
+    });
+
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
         if (outputPath.endsWith(".html")) {

@@ -215,3 +215,18 @@ button.menu-trigger {
         margin-bottom: 8px;
     }
 }
+
+[data-expandable] {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+        margin-right: 26px;
+    }
+    /* make sure there is a focus style for keyboard accessibility */
+    &:focus {
+        outline: 1px dotted var(--color-cream);
+        outline-offset: 1px;
+    }
+}
