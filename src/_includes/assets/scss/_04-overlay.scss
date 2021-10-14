@@ -29,8 +29,7 @@
 .site-title {
     transition: all .25s cubic-bezier(.645, .045, .355, 1);
     a,
-    .cta,
-    #Tock_widget_container .TockButtonWidgetContainer .TockButton {
+    .cta {
         transition: all .25s cubic-bezier(.645, .045, .355, 1);
     }
 }
@@ -56,6 +55,12 @@
     &:after {
         transform: rotate(90deg);
         position: absolute;
+    }
+}
+
+[aria-expanded="true"] > .indicator {
+    &:after {
+        transform: none;
     }
 }
 

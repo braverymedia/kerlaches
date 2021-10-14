@@ -207,6 +207,19 @@ button.menu-trigger {
 }
 .accordion div {
     max-width: 570px;
+    margin-bottom: 25px;
+    &[aria-hidden='true'] {
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .35s cubic-bezier(.645, .045, .355, 1), max-height .25s cubic-bezier(.645, .045, .355, 1) .05s;
+    }
+    &[aria-hidden='false'] {
+        max-height: 500px;
+        visibility: visible;
+        opacity: 1;
+        transition: max-height .25s cubic-bezier(.645, .045, .355, 1), opacity .35s cubic-bezier(.645, .045, .355, 1) .15s;
+    }
     @include mq(md) {
         padding-left: 62px;
     }

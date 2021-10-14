@@ -3,6 +3,7 @@ import Glide from '@glidejs/glide';
 
 const menuTrigger = document.querySelector('.menu-trigger');
 const pager = document.querySelector('.pager');
+const accordions = document.querySelector('.accordion');
 
 if ( menuTrigger ) {
   menuTrigger.addEventListener('click', (e) => {
@@ -24,6 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   zooming.listen('.img-zoomable')
 })
+
+if ( accordions ) {
+  accordions.addEventListener('click', (e) => {
+    const isButton = e.target.nodeName === 'BUTTON';
+    if ( !isButton ) {
+      return
+    }
+    let exp = accordions.querySelector(`#${e.target.dataset.expandable}`);
+    if ( e.target.getAttribute('aria-expanded') === "false") {
+      e.target.setAttribute('aria-expanded', 'true');
+      exp.setAttribute('aria-hidden', "false")
+    } else {
+      e.target.setAttribute('aria-expanded', 'false');
+      exp.setAttribute('aria-hidden', "true")
+    }
+
+  })
+}
 
 // Slider
 const CustomLength = function(Glide, Components, Events) {
