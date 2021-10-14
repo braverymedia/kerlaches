@@ -6,8 +6,6 @@ cta:
   - label: Buy Gift Cards
     action: gift-card
 service_hours:
-  - service: CLOSED
-    hours: Monday & Tuesday
   - service: Dinner
     hours: |-
       Wed–Sat: 4–10pm\
@@ -15,3 +13,5 @@ service_hours:
     menu_file: /assets/media/contigo-menu-08.20.21.pdf
   - service: Happy Hour
     hours: "Sun, Wed, Thur: 4-6pm"
+  - service: CLOSED
+    hours: Monday & Tuesday
