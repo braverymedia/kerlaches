@@ -138,6 +138,11 @@ collections:
           - { label: "Gift Cards Link", name: "gift_cards", widget: string }
           - { label: Address, name: location, widget: string }
           - { label: "Phone Number", name: phone, widget: string }
+          - label: Emails
+            name: emails
+            widget: list
+            fields:
+              - { label: Email Address, name: email, widget: string }
       - label: "Restaurant Details"
         name: "restaurant"
         file: "src/_data/restaurant.yaml"

@@ -32,6 +32,28 @@
         transition: all .25s cubic-bezier(.645, .045, .355, 1);
     }
 }
+
+.indicator {
+    display: block;
+    height: 48px;
+    width: 48px;
+    position: relative;
+    &:before,
+    &:after {
+        content: "";
+        background-color: currentColor;
+        width: 100%;
+        height: 2px;
+        border-radius: 1px;
+        transform-origin: center;
+        transition: transform .25s cubic-bezier(.645, .045, .355, 1);
+        transform: none;
+    }
+    &:after {
+        transform: rotate(90deg);
+    }
+}
+
 [data-menu-open='true'] {
     overflow: hidden;
     #site-header,
@@ -44,8 +66,7 @@
             transition: all .25s cubic-bezier(.645, .045, .355, 1);
         }
         .cta,
-        #Tock_widget_container .TockButtonWidgetContainer .TockButton {
-            border-color: var(--color-cream);
+        #ot-reservation-widget .ot-button {
             transition: all .25s cubic-bezier(.645, .045, .355, 1);
             &:hover {
                 color: var(--color-red);

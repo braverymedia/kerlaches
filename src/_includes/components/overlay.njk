@@ -3,7 +3,7 @@
         {% for exp in overlay.expandables %}
             <h2>
                 <button data-expandable="{{ exp.title | ariaExpander }}" aria-controls="{{ exp.title | ariaExpander }}" aria-expanded="false">
-                    <span class="indicator">+</span>
+                    <span class="indicator"></span>
                     {{ exp.title }}
                 </button>
             </h2>
