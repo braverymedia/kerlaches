@@ -37,6 +37,11 @@
     text-align: center;
 }
 
+.email-contact {
+    font-size: var(--type-xs);
+    text-align: center;
+}
+
 .social {
   width: 18px;
   height: 18px;
@@ -152,15 +157,15 @@ button.menu-trigger {
     opacity: 0;
     height: calc(100vh - 85px);
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
     @include mq(md) {
         visibility: visible;
         opacity: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 100%;
     }
     @include mq(lg) {
         padding-left: 50px;
@@ -198,5 +203,11 @@ button.menu-trigger {
     &:focus {
         outline: 1px dotted var(--color-cream);
         outline-offset: 1px;
+    }
+}
+.accordion div {
+    max-width: 570px;
+    @include mq(md) {
+        padding-left: 62px;
     }
 }
