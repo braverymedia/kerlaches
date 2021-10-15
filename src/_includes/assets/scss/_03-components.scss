@@ -145,7 +145,7 @@ button.menu-trigger {
         border-radius: 4px;
     }
     @include mq(md) {
-        height: 82vh;
+        height: 100vh;
     }
     @include mq(huge) {
         height: 100vh;
