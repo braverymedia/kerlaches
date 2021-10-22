@@ -71,3 +71,49 @@ $mq: (
     --button-color: var(--color-red);
     --button-hover: var(--color-cream);
 }
+
+// Animation
+@keyframes topLineClose {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(8px);
+    }
+    100% {
+        transform: rotate(45deg) translateY(8px);
+    }
+}
+@keyframes bottomLineClose {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-8px);
+    }
+    100% {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}
+@keyframes topLineOpen {
+    0% {
+        transform: rotate(45deg) translateY(8px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(8px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+}
+@keyframes bottomLineOpen {
+    0% {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-8px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+}

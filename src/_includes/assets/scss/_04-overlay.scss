@@ -73,8 +73,7 @@
         visibility: visible;
         opacity: 1;
     }
-    #site-header,
-    .site-title {
+    #site-header {
         height: auto;
         max-height: 100vh;
         background-color: var(--color-navy);
@@ -93,8 +92,33 @@
         }
 
     }
+    .site-title {
+        background-color: var(--color-navy);
+        color: var(--color-cream);
+        a {
+            color: var(--color-cream);
+            transition: all .25s cubic-bezier(.645, .045, .355, 1);
+        }
+    }
     .ctx-overlay {
         opacity: 1;
         visibility: visible;
+    }
+
+    .menu-trigger {
+        &:before {
+            animation: topLineClose;
+            animation-duration: 0.35s;
+            animation-timing-function: cubic-bezier(.645, .045, .355, 1);
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+        &:after {
+            animation: bottomLineClose;
+            animation-duration: 0.35s;
+            animation-timing-function: cubic-bezier(.645, .045, .355, 1);
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
     }
 }

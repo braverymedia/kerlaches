@@ -97,10 +97,34 @@ button.menu-trigger {
     width: 40px;
     height: 40px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     cursor: pointer;
-    > svg {
+    &:before,
+    &:after {
+        background: currentColor;
+        content: "";
+        height: 2px;
         width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        transform-origin: center;
+        flex: 100%;
+    }
+    &:before {
+        animation: topLineOpen;
+        animation-duration: 0.35s;
+        animation-timing-function: cubic-bezier(.645, .045, .355, 1);
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    &:after {
+        animation: bottomLineOpen;
+        animation-duration: 0.35s;
+        animation-timing-function: cubic-bezier(.645, .045, .355, 1);
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
     @include mq(md) {
         top: 16px;

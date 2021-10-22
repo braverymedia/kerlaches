@@ -3,7 +3,7 @@
     <head>
         {% include "components/head.njk" %}
     </head>
-    <body data-menu-open="false" data-banner="{% if settings.banner.show_banner == 'true' %}visible{% else %}none{% endif %}">
+    <body data-menu-open="false" data-banner="{% if settings.banner.show_banner == 'true' %}{{ settings.banner.banner_style }}{% else %}none{% endif %}">
         {% if settings.banner.show_banner == "true" %}
             {% include "components/banner.njk" %}
         {% endif %}
