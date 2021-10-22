@@ -46,6 +46,12 @@ main {
     @include mq(huge) {
         width: 20vw;
     }
+    [data-banner="default"] & {
+        top: 33px;
+        @include mq(md) {
+            height: calc(100vh - 33px);
+        }
+    }
 }
 .subhead {
     color: var(--color-red);

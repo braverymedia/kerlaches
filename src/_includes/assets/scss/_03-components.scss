@@ -248,3 +248,24 @@ button.menu-trigger {
         padding-left: 62px;
     }
 }
+
+.announcement {
+    background: var(--color-red);
+    color: var(--color-cream);
+    display: block;
+
+}
+[data-banner="default"] {
+    .announcement {
+        height: 33px;
+        width: 100%;
+        font-size: var(--type-xs);
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

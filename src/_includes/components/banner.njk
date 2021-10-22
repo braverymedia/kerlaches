@@ -1,0 +1,9 @@
+<article class="announcement">
+    {% if settings.banner.banner_link %}
+        <a href="{{ settings.banner.banner_link }}">
+            {{ settings.banner.banner_copy }}
+        </a>
+    {% else %}
+        {{ settings.banner.banner_copy }}
+    {% endif %}
+</article>

@@ -1,5 +1,5 @@
 <header id="site-header" class="overview">
-    <section class="site-title">
+    <section class="site-title" role="banner">
         <button class="menu-trigger">
             <span class="screenreader">Toggle Menu</span>
         </button>
@@ -88,7 +88,7 @@
         </div>
     </section>
     <section class="contigo-details">
-        <div class="button-group">
+        <article class="button-group">
             {% for button in restaurant.cta %}
                 {% if button.action == "reservations" %}
                     {{ settings.reservations_widget | safe }}
@@ -100,8 +100,8 @@
                     <a href="{{ settings.gift_cards }}" class="cta">{{ button.label }}</a>
                 {% endif %}
             {% endfor %}
-        </div>
-        <div class="hours">
+        </article>
+        <aside class="hours">
             {% for shift in restaurant.service_hours %}
                 <h2>{{ shift.service }}
                 </h2>
@@ -110,15 +110,15 @@
                     <a href="{{ shift.menu_file }}" class="menu">{{ shift.service }} Menu</a>
                 {% endif %}
             {% endfor %}
-        </div>
-        <div class="contact">
+        </aside>
+        <aside class="contact">
             {{ settings.phone | phone | safe }}
             {% if settings.location %}
                 <a href="{{ settings.location | gmapLink }}" title="Get directions">{{ settings.location }}</a>
             {% endif %}
-        </div>
+        </aside>
         {% if settings.emails %}
-            <div class="email-contact">
+            <aside class="email-contact">
                 <p>
                     {% for c in settings.emails %}
                         <a href="mailto:{{ c.email }}">{{ c.email }}</a>
@@ -127,7 +127,7 @@
                         {% endif %}
                     {% endfor %}
                 </p>
-            </div>
+            </aside>
         {% endif %}
     </section>
 </header>
