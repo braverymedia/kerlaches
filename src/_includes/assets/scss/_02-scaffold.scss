@@ -120,7 +120,7 @@ main {
         margin-left: -20px;
         margin-right: -20px;
     }
-    @include mq(md) {
+    @include mq(sm) {
         display: flex;
         gap: 24px;
         align-items: center;
@@ -178,8 +178,14 @@ main {
     }
 }
 .content--columns {
-    display: flex;
-    gap: 24px;
+    @include mq(sm) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        img {
+            max-width: 100%;
+        }
+    }
 }
 .gallery-grid {
     display: grid;
