@@ -3,7 +3,10 @@
     <head>
         {% include "components/head.njk" %}
     </head>
-    <body data-menu-open="false">
+    <body data-menu-open="false" data-banner="{% if settings.banner.show_banner == 'true' %}visible{% else %}none{% endif %}">
+        {% if settings.banner.show_banner == "true" %}
+            {% include "components/banner.njk" %}
+        {% endif %}
         {% include "components/header.njk" %}
         <main id="top">
             <section id="slider" class="glide">
