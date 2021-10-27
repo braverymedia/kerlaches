@@ -8,7 +8,19 @@
                 </button>
             </h2>
             <div id="{{ exp.title | ariaExpander }}" aria-hidden="true">
-                {{ exp.content | md | safe }}
+                {% if exp.title == "Menus" %}
+                    <ul>
+                        {% for shift in restaurant.service_hours %}
+                            {% if shift.menu_file %}
+                                <li>
+                                    <a href="{{ shift.menu_file }}" class="menu">{{ shift.service }} Menu</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {{ exp.content | md | safe }}
+                {% endif %}
             </div>
         {% endfor %}
     </article>
