@@ -5,7 +5,7 @@ section: home
 slider:
   - gallery_image: /assets/media/ak2a3259-1280x853.jpg
     alt: A view from the dining room out into the patio at dusk
-  - gallery_image: /assets/media/recess_contigo_1449.jpg
+  - gallery_image: /assets/media/contigo-24.jpg
     alt: Steak on a plate
   - gallery_image: /assets/media/contigo-6-12.jpg
     alt: Antler beer taps with someone pouring a beer.
