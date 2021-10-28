@@ -9,7 +9,7 @@ slider:
     alt: Steak on a plate
   - gallery_image: /assets/media/contigo-6-12.jpg
     alt: Antler beer taps with someone pouring a beer.
-  - gallery_image: /assets/media/contigo-6.jpg
+  - gallery_image: /assets/media/file_000.jpeg
     alt: Crispy green beans
   - gallery_image: /assets/media/contigo-6-4.jpg
     alt: Someone holding three canned cocktails
