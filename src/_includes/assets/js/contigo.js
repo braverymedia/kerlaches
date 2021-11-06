@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   zooming.listen('.img-zoomable')
+
+  if ( modalTrigger ) {
+    modalTrigger.addEventListener('click', (e) => {
+      dialog.classList.add('visible');
+    })
+    dialog.querySelector('button.close-reservations').addEventListener('click', (e) => {
+      dialog.classList.remove('visible');
+    })
+  }
 })
 
 if ( accordions ) {
@@ -73,12 +82,3 @@ slider.on(['mount.after', 'run'], () => {
 slider.mount({
   CustomLength
 })
-
-if ( modalTrigger ) {
-  modalTrigger.addEventListener('click', (e) => {
-    dialog.classList.add('visible');
-  })
-  dialog.querySelector('button.close-reservations').addEventListener('click', (e) => {
-    dialog.classList.remove('visible');
-  })
-}

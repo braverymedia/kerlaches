@@ -79,7 +79,8 @@
         max-height: 100vh;
         background-color: var(--color-navy);
         color: var(--color-cream);
-        a {
+        a,
+        .cta {
             color: var(--color-cream);
             transition: all .25s cubic-bezier(.645, .045, .355, 1);
         }

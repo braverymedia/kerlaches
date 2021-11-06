@@ -1,5 +1,4 @@
-.cta,
-#ot-reservation-widget .ot-button {
+.cta {
     background-color: transparent;
     display: flex;
     margin: 16px 0;
@@ -14,13 +13,11 @@
     font-weight: 700;
     text-align: center;
     text-decoration: none;
+    width: 100%;
     &:hover {
         background-color: var(--button-color);
         color: var(--button-hover);
     }
-}
-.ot-powered-by {
-    display: none;
 }
 #ot-reservation-widget {
     width: 100% !important;
@@ -80,7 +77,8 @@
     }
 }
 
-button.menu-trigger {
+button.menu-trigger,
+button.close-reservations {
     appearance: none;
     background-color: transparent;
     border: 0;
@@ -266,5 +264,39 @@ button.menu-trigger {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+#reservations {
+    background-color: rgba( #1a191a, .9);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2000;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    display: none;
+    &.visible {
+        display: flex;
+        opacity: 1;
+    }
+    > button {
+        color: var(--color-cream);
+        top: auto;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-9px);
+        &:before {
+            transform: rotate(45deg) translateY(8px) !important;
+        }
+        &:after {
+            transform: rotate(-45deg) translateY(-8px) !important;
+        }
     }
 }

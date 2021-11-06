@@ -22,7 +22,7 @@
             <div class="button-group default-margins">
                 {% for button in restaurant.cta %}
                     {% if button.action == "reservations" %}
-                        {{ settings.reservations_widget | safe }}
+                        <button class="cta" data-type="reservations" id="reztoggle">{{ button.label }}</button>
                     {% endif %}
                     {% if button.action == "order" %}
                         <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>
@@ -61,6 +61,7 @@
             {% include "components/footer.njk" %}
         </main>
         {% include "components/overlay.njk" %}
+        {% include "components/reservations.njk" %}
         <script src="assets/js/contigo.bundle.js"></script>
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </body>
