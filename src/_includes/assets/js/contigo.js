@@ -33,7 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     else if ( e.target === dialog.querySelector('button.close-reservations') ) {
       dialog.classList.remove('visible');
-    } else {
+    }
+    else if ( e.target === document.querySelector('button.close-banner') ) {
+      document.body.dataset.banner = "false";
+    }
+    else {
       return;
     }
   })

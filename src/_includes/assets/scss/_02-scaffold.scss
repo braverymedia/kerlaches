@@ -164,16 +164,9 @@ main {
         }
         &.layout-top {
             flex-direction: column;
-            flex: 1;
+            flex: 1 50%;
             > figure {
-                max-width: 100%;
-                width: 385px;
-                height: 255px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
+                @include aspect-ratio( 385px, 255px);
             }
         }
     }

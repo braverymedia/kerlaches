@@ -78,7 +78,7 @@
 }
 
 button.menu-trigger,
-button.close-reservations {
+[role="dialog"] button {
     appearance: none;
     background-color: transparent;
     border: 0;
@@ -250,20 +250,42 @@ button.close-reservations {
 .announcement {
     background: var(--color-red);
     color: var(--color-cream);
-    display: block;
+    display: flex;
+}
+[data-banner="false"] {
+    .announcement {
+        display: none;
+    }
 }
 [data-banner="default"] {
     .announcement {
         height: 33px;
         width: 100%;
-        font-size: var(--type-xs);
         position: sticky;
         top: 0;
         z-index: 200;
-        text-align: center;
-        display: flex;
         justify-content: center;
         align-items: center;
+        > section {
+            font-size: var(--type-xs);
+            text-align: center;
+        }
+    }
+}
+
+[data-banner="full"] {
+    overflow: hidden;
+    .announcement {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        padding: 50px;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        @include mq(md) {
+            width: 70vw;
+        }
     }
 }
 
@@ -287,17 +309,17 @@ button.close-reservations {
         display: flex;
         opacity: 1;
     }
-    > button {
-        color: var(--color-cream);
-        top: auto;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-9px);
-        &:before {
-            transform: rotate(45deg) translateY(8px) !important;
-        }
-        &:after {
-            transform: rotate(-45deg) translateY(-8px) !important;
-        }
+}
+[role="dialog"] button {
+    color: var(--color-cream);
+    top: auto;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-9px);
+    &:before {
+        transform: rotate(45deg) translateY(8px) !important;
+    }
+    &:after {
+        transform: rotate(-45deg) translateY(-8px) !important;
     }
 }
