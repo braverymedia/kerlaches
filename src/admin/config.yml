@@ -124,8 +124,7 @@ collections:
             widget: object
             fields:
               - { label: "Show announcement banner", name: show_banner, widget: boolean }
-              - { label: "Announcement Text", name: banner_copy, required: false, widget: string }
-              - { label: "Announcement Link", name: banner_link, required: false, widget: string }
+              - { label: "Announcement Text", name: banner_copy, required: false, widget: markdown }
               - label: "Announcement Style"
                 name: banner_style
                 widget: select

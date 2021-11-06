@@ -1,12 +1,6 @@
 <article class="announcement" {% if settings.banner.banner_style === 'full' %} role="dialog" {% endif %}>
     <section>
-        {% if settings.banner.banner_link %}
-            <a href="{{ settings.banner.banner_link }}">
-                {{ settings.banner.banner_copy }}
-            </a>
-        {% else %}
-            {{ settings.banner.banner_copy }}
-        {% endif %}
+        {{ settings.banner.banner_copy }}
     </section>
     {% if settings.banner.banner_style === 'full' %}
         <button class="close-banner">
