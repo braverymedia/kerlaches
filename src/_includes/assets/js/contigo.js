@@ -4,7 +4,7 @@ import Glide from '@glidejs/glide';
 const menuTrigger = document.querySelector('.menu-trigger');
 const pager = document.querySelector('.pager');
 const accordions = document.querySelector('.accordion');
-const modalTrigger = document.querySelector('#reztoggle');
+const modalTrigger = document.querySelector('button[data-type="reservations"]');
 const dialog = document.querySelector('#reservations');
 
 if ( menuTrigger ) {
@@ -27,14 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   zooming.listen('.img-zoomable')
 
-  if ( modalTrigger ) {
-    modalTrigger.addEventListener('click', (e) => {
+  document.body.addEventListener( 'click', (e) => {
+    if (e.target.dataset.type === 'reservations' ) {
       dialog.classList.add('visible');
-    })
-    dialog.querySelector('button.close-reservations').addEventListener('click', (e) => {
+    }
+    else if ( e.target === dialog.querySelector('button.close-reservations') ) {
       dialog.classList.remove('visible');
-    })
-  }
+    } else {
+      return;
+    }
+  })
 })
 
 if ( accordions ) {

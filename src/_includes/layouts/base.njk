@@ -22,7 +22,7 @@
             <div class="button-group default-margins">
                 {% for button in restaurant.cta %}
                     {% if button.action == "reservations" %}
-                        <button class="cta" data-type="reservations" id="reztoggle">{{ button.label }}</button>
+                        <button class="cta" data-type="reservations" id="reztoggle-mobile">{{ button.label }}</button>
                     {% endif %}
                     {% if button.action == "order" %}
                         <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>

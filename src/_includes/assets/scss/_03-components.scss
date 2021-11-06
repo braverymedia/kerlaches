@@ -282,6 +282,7 @@ button.close-reservations {
     justify-content: center;
     opacity: 0;
     display: none;
+    transition: all .25s cubic-bezier(.645, .045, .355, 1) .15s;
     &.visible {
         display: flex;
         opacity: 1;
