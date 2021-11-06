@@ -8,7 +8,7 @@ banner:
   banner_link: ""
   banner_style: default
 reservations_widget: <script type='text/javascript'
-  src='//www.opentable.com/widget/reservation/loader?rid=83281&type=button&theme=standard&iframe=false&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+  src='//www.opentable.com/widget/reservation/loader?rid=83281&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
 order_link: https://www.toasttab.com/contigo-austin/v3
 gift_cards: https://www.toasttab.com/contigo-austin/giftcards
 location: 2027 Anchor Lane, Austin, TX 78723
