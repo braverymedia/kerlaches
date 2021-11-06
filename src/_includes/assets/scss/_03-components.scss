@@ -167,9 +167,9 @@ button.menu-trigger,
         border-radius: 4px;
     }
     @include mq(md) {
-        height: 100vh;
+        height: 40vh;
     }
-    @include mq(huge) {
+    @include mq(lg) {
         height: 100vh;
     }
 }
