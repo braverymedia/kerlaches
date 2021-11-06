@@ -5,6 +5,7 @@
     opacity: 0;
     visibility: hidden;
     transition: visibility .25s cubic-bezier(.645, .045, .355, 1), opacity .25s cubic-bezier(.645, .045, .355, 1);
+    display: none;
     @include mq(md) {
         display: flex;
         padding: 32px 50px;

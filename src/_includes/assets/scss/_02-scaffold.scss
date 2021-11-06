@@ -30,6 +30,7 @@ main {
     max-height: 100vh;
     position: sticky;
     top: 0;
+    z-index: 10;
     @include mq(md) {
         width: 30vw;
         position: fixed;

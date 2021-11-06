@@ -91,7 +91,7 @@
         <article class="button-group">
             {% for button in restaurant.cta %}
                 {% if button.action == "reservations" %}
-                    {{ settings.reservations_widget | safe }}
+                    <button class="cta" data-type="reservations" id="reztoggle">{{ button.label }}</button>
                 {% endif %}
                 {% if button.action == "order" %}
                     <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>

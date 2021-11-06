@@ -4,6 +4,8 @@ import Glide from '@glidejs/glide';
 const menuTrigger = document.querySelector('.menu-trigger');
 const pager = document.querySelector('.pager');
 const accordions = document.querySelector('.accordion');
+const modalTrigger = document.querySelector('#reztoggle');
+const dialog = document.querySelector('#reservations');
 
 if ( menuTrigger ) {
   menuTrigger.addEventListener('click', (e) => {
@@ -71,3 +73,12 @@ slider.on(['mount.after', 'run'], () => {
 slider.mount({
   CustomLength
 })
+
+if ( modalTrigger ) {
+  modalTrigger.addEventListener('click', (e) => {
+    dialog.classList.add('visible');
+  })
+  dialog.querySelector('button.close-reservations').addEventListener('click', (e) => {
+    dialog.classList.remove('visible');
+  })
+}
