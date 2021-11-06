@@ -3,7 +3,7 @@ site_description: An East Austin restaurant modeled after our family's Texas ran
 social:
   instagram: https://instagram.com/contigoaustin
 banner:
-  show_banner: true
+  show_banner: false
   banner_copy: Test Announcement for Contigo.
   banner_link: ""
   banner_style: default
