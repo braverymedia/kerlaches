@@ -163,18 +163,18 @@ main {
                 }
         }
         &.layout-top {
+            display: flex;
             flex-direction: column;
-            flex: 1 50%;
             > figure {
                 @include aspect-ratio( 385px, 255px);
+                width: 100%;
             }
         }
     }
 }
 .content--columns {
     @include mq(sm) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         gap: 24px;
         img {
             max-width: 100%;
