@@ -1,7 +1,3 @@
-[build]
-base = "src/"
-publish = "_site"
-
 [[redirects]]
 from = "/*"
 to = "https://contigoaustin.com"
