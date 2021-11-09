@@ -1,0 +1,9 @@
+[build]
+base = "src/"
+command = "npm run build"
+
+[[redirects]]
+from = "/*"
+to = "https://contigoaustin.com"
+status = 301
+force = true

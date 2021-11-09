@@ -54,7 +54,7 @@ $mq: (
     display: block;
     content: "";
     width: 100%;
-    padding-top: ($height / $width) * 100%;
+    padding-top: math.div($height, $width) * 100%;
   }
   > img {
     position: absolute;
