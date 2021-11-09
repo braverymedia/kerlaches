@@ -18,11 +18,10 @@ module.exports = function (eleventyConfig) {
     // Copy Static Files to /_Site
     eleventyConfig
         .addPassthroughCopy({
-            "./src/admin/config.yml": "./admin/config.yml"
+            "./src/admin/config.yml": "./admin/config.yml",
+            "./src/_includes/assets/media": "/assets/media",
+            "./src/_includes/assets/icons": "/assets/icons"
         })
-        .addPassthroughCopy({
-            "./src/_includes/assets/media": "/assets/media"
-        });
 
     eleventyConfig.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
