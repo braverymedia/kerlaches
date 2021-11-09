@@ -112,7 +112,7 @@ collections:
         fields:
           - { label: "Site Title", name: site_title, widget: string }
           - { label: "SEO Description", name: site_description, widget: text }
-          - { label: "Google Analytics ID", name: ga, widget: text }
+          - { label: "Google Analytics ID", name: ga, widget: string }
           - label: "Social Media"
             name: social
             widget: object
