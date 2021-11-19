@@ -7,3 +7,8 @@ status = 301
 from = "http://contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
+
+[[redirects]]
+from = "/*"
+to = "https://contigoaustin.com"
+status = 301
