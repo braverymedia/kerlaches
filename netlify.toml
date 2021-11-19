@@ -2,23 +2,28 @@
 from = "https://contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
+force = true
 
 [[redirects]]
 from = "https://www.contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
+force = true
 
 [[redirects]]
 from = "http://www.contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
+force = true
 
 [[redirects]]
 from = "http://contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
+force = true
 
 [[redirects]]
 from = "/*"
 to = "https://contigoaustin.com"
 status = 301
+force = false
