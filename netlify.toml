@@ -1,4 +1,9 @@
 [[redirects]]
-from = "/*"
+from = "https://contigotexas.com/*"
+to = "https://contigoaustin.com"
+status = 301
+
+[[redirects]]
+from = "http://contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
