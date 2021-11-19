@@ -4,6 +4,16 @@ to = "https://contigoaustin.com"
 status = 301
 
 [[redirects]]
+from = "https://www.contigotexas.com/*"
+to = "https://contigoaustin.com"
+status = 301
+
+[[redirects]]
+from = "http://www.contigotexas.com/*"
+to = "https://contigoaustin.com"
+status = 301
+
+[[redirects]]
 from = "http://contigotexas.com/*"
 to = "https://contigoaustin.com"
 status = 301
