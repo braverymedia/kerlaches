@@ -50,14 +50,6 @@ column_cards:
       [Contact Us](https://austinvenuecollective.tripleseat.com/party_request/17859)
     card_image: /assets/media/ak2a3259-1280x853.jpg
     alt: View from inside the dining room out into the patio area at sunset
-  - content: |-
-      ### Gift Cards
-
-      Give someone the gift of a great meal with a Contigo gift card.
-
-      [Purchase gift cards](https://www.toasttab.com/contigo-austin/giftcards)
-    alt: Contigo Gift Cards
-    card_image: /assets/media/contigo-6.jpg
 grid:
   - gallery_image: /assets/media/contigo-6-2.jpg
     alt: Cocktail on a table
