@@ -3,8 +3,6 @@ cta:
     action: reservations
   - label: Order Online
     action: order
-  - label: Buy Gift Cards
-    action: gift-card
 service_hours:
   - service: Dinner
     hours: |-
