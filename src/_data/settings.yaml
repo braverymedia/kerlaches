@@ -4,10 +4,14 @@ ga: UA-58171229-1
 social:
   instagram: https://instagram.com/contigoaustin
 banner:
-  show_banner: false
-  banner_copy: Test Announcement for Contigo.
+  show_banner: true
+  banner_copy: >-
+    ## Last service 12/30
+
+
+    After 10 years of serving our community, we have decided it is time for us to let Contigo rest. December 30 will mark our final service. It has been an incredible ride, and we are overwhelmingly thankful for the support we have received over the years. Thank you, Austin!
   banner_link: ""
-  banner_style: default
+  banner_style: full
 reservations_widget: <script type='text/javascript'
   src='//www.opentable.com/widget/reservation/loader?rid=83281&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
 order_link: https://www.toasttab.com/contigo-austin/v3
