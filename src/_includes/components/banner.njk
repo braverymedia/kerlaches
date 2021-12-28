@@ -1,6 +1,6 @@
 <article class="announcement" {% if settings.banner.banner_style === 'full' %} role="dialog" {% endif %}>
     <section>
-        {{ settings.banner.banner_copy }}
+        {{ settings.banner.banner_copy | md | safe }}
     </section>
     {% if settings.banner.banner_style === 'full' %}
         <button class="close-banner">
