@@ -1,6 +1,6 @@
-site_title: Contigo
-site_description: An East Austin restaurant modeled after our family's Texas ranch.
-ga: UA-58171229-1
+site_title: Kerlaches
+site_description: The best bbq-stuffed Kolaches in Texas.
+ga:
 social:
   instagram: https://instagram.com/kerlaches
 banner:
@@ -16,5 +16,5 @@ contact_info:
   state: "TX"
   zipcode: "78702"
 emails:
-  - email: info@contigoaustin.com
-  - email: events@contigoaustin.com
+  - email: info@kerlachesaustin.com
+  - email: contact@kerlachesaustin.com

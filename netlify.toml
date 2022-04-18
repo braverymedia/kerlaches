@@ -1,29 +1,29 @@
 [[redirects]]
 from = "https://kerlaches.com/*"
-to = "https://contigoaustin.com"
+to = "https://kerlachesaustin.com"
 status = 301
 force = true
 
 [[redirects]]
 from = "https://www.kerlaches.com/*"
-to = "https://contigoaustin.com"
+to = "https://kerlachesaustin.com"
 status = 301
 force = true
 
 [[redirects]]
 from = "http://www.kerlaches.com/*"
-to = "https://contigoaustin.com"
+to = "https://kerlachesaustin.com"
 status = 301
 force = true
 
 [[redirects]]
 from = "http://kerlaches.com/*"
-to = "https://contigoaustin.com"
+to = "https://kerlachesaustin.com"
 status = 301
 force = true
 
 [[redirects]]
 from = "/*"
-to = "https://contigoaustin.com"
+to = "https://kerlachesaustin.com"
 status = 301
 force = false
