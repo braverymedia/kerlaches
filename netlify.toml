@@ -27,3 +27,9 @@ from = "/*"
 to = "https://kerlachesaustin.com"
 status = 301
 force = false
+
+[[plugins]]
+package = "netlify-plugin-cloudinary"
+
+[plugins.inputs]
+imagesPath = "/assets/media"
