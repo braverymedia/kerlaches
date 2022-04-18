@@ -4,12 +4,6 @@ cta:
   - label: Order Online
     action: order
 service_hours:
-  - service: Dinner
+  - service: Hours
     hours: |-
-      Wed–Sat: 4–10pm\
-      Sun: 4–9pm
-    menu_file: /assets/media/contigo-menu-12.01.21.pdf
-  - service: Happy Hour
-    hours: "Sun, Wed, Thur: 4-6pm"
-  - service: CLOSED
-    hours: Monday & Tuesday
+      Wed–Sun: 8am–3pm

@@ -50,6 +50,25 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("ariaExpander", (name) => {
         return `${name.replace(/\s+/g, '-').toLowerCase()}-exp`
     });
+        /**
+     * Remove any CSS not used on the page and inline the remaining CSS in the
+     * <head>.
+     *
+     * @see {@link https://github.com/FullHuman/purgecss}
+     */
+    eleventyConfig.addTransform('purge-and-inline-css', async function(content) {
+        if (process.env.ELEVENTY_ENV !== 'production' || !this.outputPath.endsWith('.html')) {
+            return content;
+        }
+
+        const purgeCSSResults = await new PurgeCSS().purge({
+            content: [{ raw: content }],
+            css: ['_site/assets/css/kerlaches.css'],
+            keyframes: true
+        });
+
+        return content.replace('<!-- INLINE CSS-->', '<style>' + purgeCSSResults[0].css + '</style>');
+    });
 
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

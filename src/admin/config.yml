@@ -1,7 +1,6 @@
-site_url: https://contigotexas.com
-display_url: https://contigotexas.com
+site_url: https://kerlaches.com
+display_url: https://kerlaches.com
 search: false
-
 backend:
   # Use netlify identity as backend
   name: git-gateway
@@ -133,38 +132,95 @@ collections:
                 options:
                   - { label: "Banner", value: "default" }
                   - { label: "Fullscreen", value: "full" }
-          - { label: "Reservations Widget", name: "reservations_widget", widget: code, default_language: "html", output_code_only: true}
-          - { label: "Online Ordering Link", name: "order_link", widget: string }
-          - { label: "Gift Cards Link", name: "gift_cards", widget: string }
-          - { label: Address, name: location, widget: string }
-          - { label: "Phone Number", name: phone, widget: string }
+          - label: "Contact"
+            name: "contact_info"
+            widget: object
+            fields:
+              - { label: Street Number, name: address, widget: string }
+              - { label: City, name: city, widget: string}
+              - { label: State, name: state, widget: string}
+              - { label: Zip Code, name: zipcode, widget: string }
+              - { label: "Phone Number", name: phone, widget: string }
           - label: Emails
             name: emails
             widget: list
             fields:
               - { label: Email Address, name: email, widget: string }
-      - label: "Restaurant Details"
+      - label: "Hours and Ordering"
         name: "restaurant"
         file: "src/_data/restaurant.yaml"
         fields:
-          - label: "Buttons"
-            name: "cta"
-            widget: "list"
-            allow_add: true
+          - { label: "Online Ordering Link", name: "order_link", widget: string }
+          - { label: "Gift Cards Link", name: "gift_cards", widget: string }
+          - label: "Opening Hours"
+            name: 'openingHours'
+            widget: 'list'
             fields:
-              - { label: "Button Label", name: "label", widget: "string" }
-              - label: "Type"
-                name: "action"
-                widget: "select"
-                options:
-                  - { label: "Reservations", value: "reservations" }
-                  - { label: "Order Online", value: "order" }
-                  - { label: "Gift Cards", value: "gift-card" }
-          - label: "Service Hours"
-            name: "service_hours"
-            widget: "list"
-            allow_add: true
+              - label: "Monday"
+                name: 'mo'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'monday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+              - label: "Tuesday"
+                name: 'tu'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'tuesday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+              - label: "Wednesday"
+                name: 'we'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'wednesday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+              - label: "Thursday"
+                name: 'th'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'thursday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+              - label: "Friday"
+                name: 'fr'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'friday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+              - label: "Saturday"
+                name: 'sa'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'saturday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+              - label: "Sunday"
+                name: 'su'
+                widget: 'object'
+                fields:
+                  - { label: 'Day', name: 'day', default: 'sunday', widget: 'hidden' }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+      - label: SEO
+        name: "seo"
+        file: "src/_data/seo.yaml"
+        fields:
+          - label: "Structured Data"
+            name: "schema"
+            widget: "object"
+            hint: "This is hidden data that Google uses to create the card that shows up in search results and business profiles. Fill out as much or as little as you'd like."
             fields:
-              - { label: "Service", name: "service", widget: "markdown" }
-              - { label: "Hours", name: "hours", widget: "text" }
-              - { label: "Upload Menu", name: "menu_file", widget: file, required: false }
+              - { label: "Trailer Description", name: 'description', widget: 'text', hint: 'Will show up in the Google Business card in search results'}
+              - { label: "Price Range", name: 'priceRange', widget: 'string', hint: "ex. $5.00-$10.00"}
+              - { label: "Menu", name: 'hasMenu', widget: 'file' }

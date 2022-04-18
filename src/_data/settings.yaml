@@ -2,22 +2,19 @@ site_title: Contigo
 site_description: An East Austin restaurant modeled after our family's Texas ranch.
 ga: UA-58171229-1
 social:
-  instagram: https://instagram.com/contigoaustin
+  instagram: https://instagram.com/kerlaches
 banner:
-  show_banner: true
-  banner_copy: >-
-    ## Last service 12/30
-
-
-    After 10 years of serving our community, we have decided it is time for us to let Contigo rest. December 30 will mark our final service. It has been an incredible ride, and we are overwhelmingly thankful for the support we have received over the years. Thank you, Austin!
+  show_banner: false
+  banner_copy: ""
   banner_link: ""
-  banner_style: full
-reservations_widget: <script type='text/javascript'
-  src='//www.opentable.com/widget/reservation/loader?rid=83281&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
-order_link: https://www.toasttab.com/contigo-austin/v3
-gift_cards: https://www.toasttab.com/contigo-austin/giftcards
-location: 2027 Anchor Lane, Austin, TX 78723
-phone: (512) 614-2260
+  banner_style: ""
+order_link:
+gift_cards:
+contact_info:
+  address: "2505 Webberville Rd"
+  city: "Austin"
+  state: "TX"
+  zipcode: "78702"
 emails:
   - email: info@contigoaustin.com
   - email: events@contigoaustin.com
