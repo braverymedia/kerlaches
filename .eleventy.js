@@ -18,7 +18,6 @@ module.exports = function (eleventyConfig) {
     // Copy Static Files to /_Site
     eleventyConfig
         .addPassthroughCopy({
-            "./src/admin/config.yml": "./admin/config.yml",
             "./src/_includes/assets/media": "/assets/media",
             "./src/_includes/assets/icons": "/assets/icons"
         })
@@ -82,10 +81,6 @@ module.exports = function (eleventyConfig) {
         }
 
         return content;
-    });
-
-    eleventyConfig.setBrowserSyncConfig({
-        ghostMode: false
     });
 
     // Let Eleventy transform HTML files as nunjucks
