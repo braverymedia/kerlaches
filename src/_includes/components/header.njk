@@ -8,9 +8,6 @@
     <section class="kerlaches-details">
         <article class="button-group">
             {% for button in restaurant.cta %}
-                {% if button.action == "reservations" %}
-                    <button class="cta" data-type="reservations" id="reztoggle">{{ button.label }}</button>
-                {% endif %}
                 {% if button.action == "order" %}
                     <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>
                 {% endif %}

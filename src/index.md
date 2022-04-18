@@ -3,21 +3,64 @@ layout: layouts/base.njk
 title: Kerlaches
 section: home
 slider:
-    - gallery_image:
-      alt:
+  - gallery_image: /assets/media/ak2a3259-1280x853.jpg
+    alt: A view from the dining room out into the patio at dusk
+  - gallery_image: /assets/media/kerlaches-24.jpg
+    alt: Steak on a plate
+  - gallery_image: /assets/media/kerlaches-6-12.jpg
+    alt: Antler beer taps with someone pouring a beer.
+  - gallery_image: /assets/media/kerlachesgreenbeans_knoxyphotographics.jpg
+    alt: Crispy green beans
+  - gallery_image: /assets/media/kerlaches-6-4.jpg
+    alt: Someone holding three canned cocktails
+  - gallery_image: /assets/media/kerlaches-6-6.jpg
+    alt: A bartender's hand expressing orange peel over a cocktail.
 site_intro:
-    subhead: Welcome to kerlaches
-    content:
+  subhead: Welcome to kerlaches
+  content: >-
+    ## An East Austin restaurant modeled after our family's Texas ranch
+
+
+    We opened our doors in 2011 as a chef-owned, community-driven restaurant. We have always focused on the traditional Texas experience of gathering with friends to spend time outdoors. We find the best ingredients available and rely on a talented team of culinary professionals to create flavors both new and familiar. We are motivated by our passion more than profit. Our goal is to foster the growth of our team, care for our guests, utilize our natural talents, and create a healthy and sustainable restaurant environment. We hope you will join us soon.
 cards:
-    - content:
-      card_image:
-      alt:
-      image_style:
+  - content: >-
+      ### Enjoy our outdoor seating
+
+
+      We hope you will join us in the Beer Garden for dinner. We are taking great measures to ensure safety, and we hope we can serve you soon.
+    card_image: /assets/media/kerlaches-6-9.jpg
+    alt: Plates on a table
+    image_style: Left
+  - content: >-
+      ### Grab a classic burger or try something new!
+
+
+      While we still have our classic kerlaches Burger and Crispy Green Beans, we have added a few new items to our menu. Join us at the restaurant, or order for curbside pickup to see what we have been up to.
+    card_image: /assets/media/img_7198-1280x853.jpg
+    alt: A burger and fries with a pint of beer.
+    image_style: Right
 column_cards:
-    - content:
-      card_image:
-      alt:
+  - content: >-
+      ### Book our space
+
+
+      Learn more about booking our space for your next private event.
+
+
+      [Contact Us](https://austinvenuecollective.tripleseat.com/party_request/17859)
+    card_image: /assets/media/ak2a3259-1280x853.jpg
+    alt: View from inside the dining room out into the patio area at sunset
 grid:
-    - gallery_image:
-      alt:
+  - gallery_image: /assets/media/kerlaches-6-2.jpg
+    alt: Cocktail on a table
+  - gallery_image: /assets/media/kerlaches-6-7.jpg
+    alt: A plate of food and a beer
+  - gallery_image: /assets/media/kerlaches-6-0.jpg
+    alt: Wine service
+  - gallery_image: /assets/media/kerlaches-6-9.jpg
+    alt: A plate of food
+  - gallery_image: /assets/media/kerlaches-6-11.jpg
+    alt: A cocktail and dinner
+  - gallery_image: /assets/media/kerlaches-6-1.jpg
+    alt: A beer on a table
 ---
