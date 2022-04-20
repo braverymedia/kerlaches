@@ -1,6 +1,7 @@
 site_title: Kerlaches
 site_description: The best bbq-stuffed Kolaches in Texas.
-ga:
+order_link: null
+ga: "311539750"
 social:
   instagram: https://instagram.com/kerlaches
 banner:
@@ -8,13 +9,13 @@ banner:
   banner_copy: ""
   banner_link: ""
   banner_style: ""
-order_link:
-gift_cards:
 contact_info:
-  address: "2505 Webberville Rd"
-  city: "Austin"
-  state: "TX"
+  address: 2505 Webberville Rd
+  city: Austin
+  state: TX
   zipcode: "78702"
+  phone: (512) 521-1604
+gift_cards: null
 emails:
   - email: info@kerlachesaustin.com
   - email: contact@kerlachesaustin.com

@@ -1,12 +1,16 @@
 const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
+const responsiveImages = require("eleventy-plugin-responsive-images");
 
 let imgConfig = {
     "breakpoints": [ 375, 768, 1024, 1360, 1600, 1980 ],
     "resize": "fit"
 }
 module.exports = function (eleventyConfig) {
+    eleventyConfig.cloudinaryCloudName = "kerlaches";
+    eleventyConfig.hostname = "https://playful-crisp-33f7e0.netlify.app/";
+
     // Disable automatic use of your .gitignore
     eleventyConfig.setUseGitIgnore(false);
 
@@ -15,9 +19,13 @@ module.exports = function (eleventyConfig) {
         yaml.safeLoad(contents)
     );
 
+    // Cloudinary and responsive images
+    eleventyConfig.addPlugin(responsiveImages);
+
     // Copy Static Files to /_Site
     eleventyConfig
         .addPassthroughCopy({
+            "./src/_includes/assets/img": "/assets/img",
             "./src/_includes/assets/media": "/assets/media",
             "./src/_includes/assets/icons": "/assets/icons"
         })

@@ -33,12 +33,12 @@
         </aside>
         <aside class="contact">
             {% if settings.contact_info.phone %}
-                {{ settings.phone | phone | safe }}
+                {{ settings.contact_info.phone | phone | safe }}
             {% endif %}
             {% if settings.contact_info.address %}
-                {% set location %}
+                {% set location -%}
                     {{ settings.contact_info.address }} {{ settings.contact_info.city }}, {{ settings.contact_info.stat }} {{ settings.contact_info.zipcode }}
-                {% endset %}
+                {%- endset %}
                 <a href="{{ location | gmapLink }}" title="Get directions">{{- location -}}</a>
             {% endif %}
         </aside>

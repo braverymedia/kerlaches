@@ -5,5 +5,28 @@ cta:
     action: order
 service_hours:
   - service: Hours
-    hours: |-
-      Wed–Sun: 8am–3pm
+    hours: "Wed–Sun: 8am–3pm"
+openingHours:
+  mo:
+    open_time: 2:14 PM
+    closing_time: 3:00 PM
+    closed: true
+  tu:
+    open_time: 2:14 PM
+    closing_time: 2:14 PM
+    closed: true
+  we:
+    open_time: 8:00 AM
+    closing_time: 3:00 PM
+  th:
+    open_time: 8:00 AM
+    closing_time: 3:00 PM
+  fr:
+    open_time: 8:00 AM
+    closing_time: 3:00 PM
+  sa:
+    open_time: 8:00 AM
+    closing_time: 3:00 PM
+  su:
+    open_time: 8:00 AM
+    closing_time: 3:00 PM

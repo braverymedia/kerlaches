@@ -2,65 +2,51 @@
 layout: layouts/base.njk
 title: Kerlaches
 section: home
-slider:
-  - gallery_image: /assets/media/ak2a3259-1280x853.jpg
-    alt: A view from the dining room out into the patio at dusk
-  - gallery_image: /assets/media/kerlaches-24.jpg
-    alt: Steak on a plate
-  - gallery_image: /assets/media/kerlaches-6-12.jpg
-    alt: Antler beer taps with someone pouring a beer.
-  - gallery_image: /assets/media/kerlachesgreenbeans_knoxyphotographics.jpg
-    alt: Crispy green beans
-  - gallery_image: /assets/media/kerlaches-6-4.jpg
-    alt: Someone holding three canned cocktails
-  - gallery_image: /assets/media/kerlaches-6-6.jpg
-    alt: A bartender's hand expressing orange peel over a cocktail.
+slider: []
 site_intro:
-  subhead: Welcome to kerlaches
+  subhead: Smoke • Dough • Love
   content: >-
-    ## An East Austin restaurant modeled after our family's Texas ranch
+    ## The best BBQ-stuffed kolaches in Texas. Are you craving Kerlaches?
 
 
-    We opened our doors in 2011 as a chef-owned, community-driven restaurant. We have always focused on the traditional Texas experience of gathering with friends to spend time outdoors. We find the best ingredients available and rely on a talented team of culinary professionals to create flavors both new and familiar. We are motivated by our passion more than profit. Our goal is to foster the growth of our team, care for our guests, utilize our natural talents, and create a healthy and sustainable restaurant environment. We hope you will join us soon.
+    Amelis Paz Kerlin came to The United States more than 27 years ago from Venezuela with big dreams. She and her husband Bill Kerlin opened the nationally recognized barbecue trailer Kerlin BBQ in 2013. Kerlin BBQ has been regularly named one of the best barbecue spots in Austin and the United States.\
+
+    \
+
+    One day on a road trip together through Central Texas Amelis had her first kolache, a popular Czech Tex pastry served throughout the region. It immediately reminded her of the Venezuelan Cachitos (a semi-sweet bread stuffed with meat) she had enjoyed as a child.\
+
+    \
+
+    She decided to try her hand at making a semi sweet dough stuffed with Kerlin BBQ’s smoked meats and after a few test batches the famous Kerlache was born.\
+
+    \
+
+    Kerlin BBQ debuted their Kerlaches in 2015 and they were an immediate hit. Soon word began to get out, inspiring the likes of Texas Monthly, The Austin Chronicle, The Austin American Statesman and many others to write about them. Customers began lining up before they opened or preordering days in advance. People began coming from other states and even other countries to get their hands on what was quickly becoming an Austin icon.\
+
+    \
+
+    With the increasing demand and limited space at Kerlin BBQ, Bill and Amelis realized that they were becoming inaccessible to many people, often selling out in less than an hour. Wanting to make as many people happy as possible, they decided to open a standalone concept dedicated exclusively to their famous Kerlaches.
 cards:
   - content: >-
-      ### Enjoy our outdoor seating
+      > “Kerlin BBQ’s barbecue kolaches are even better than I remembered.”
 
 
-      We hope you will join us in the Beer Garden for dinner. We are taking great measures to ensure safety, and we hope we can serve you soon.
-    card_image: /assets/media/kerlaches-6-9.jpg
-    alt: Plates on a table
+      <cite>[Daniel Vaughn, ***Texas Monthly***](https://www.texasmonthly.com/bbq/kerlin-bbq-barbecue-kolaches/)
+    card_image: /assets/media/img_20220123_100325_659.jpg
+    alt: A stack of kerlaches
     image_style: Left
-  - content: >-
-      ### Grab a classic burger or try something new!
-
-
-      While we still have our classic kerlaches Burger and Crispy Green Beans, we have added a few new items to our menu. Join us at the restaurant, or order for curbside pickup to see what we have been up to.
-    card_image: /assets/media/img_7198-1280x853.jpg
-    alt: A burger and fries with a pint of beer.
-    image_style: Right
-column_cards:
-  - content: >-
-      ### Book our space
-
-
-      Learn more about booking our space for your next private event.
-
-
-      [Contact Us](https://austinvenuecollective.tripleseat.com/party_request/17859)
-    card_image: /assets/media/ak2a3259-1280x853.jpg
-    alt: View from inside the dining room out into the patio area at sunset
+column_cards: []
 grid:
-  - gallery_image: /assets/media/kerlaches-6-2.jpg
-    alt: Cocktail on a table
-  - gallery_image: /assets/media/kerlaches-6-7.jpg
-    alt: A plate of food and a beer
-  - gallery_image: /assets/media/kerlaches-6-0.jpg
-    alt: Wine service
-  - gallery_image: /assets/media/kerlaches-6-9.jpg
-    alt: A plate of food
-  - gallery_image: /assets/media/kerlaches-6-11.jpg
-    alt: A cocktail and dinner
-  - gallery_image: /assets/media/kerlaches-6-1.jpg
-    alt: A beer on a table
+  - gallery_image: /assets/media/277699738_1069780466904105_717307855542515772_n.webp
+    alt: Kerlaches fresh out of the oven
+  - gallery_image: /assets/media/img_20220206_085717_853.jpg
+    alt: A stack of cheese and brisket filled kolaches
+  - gallery_image: /assets/media/274582277_462373718658974_3917128653619594150_n.webp
+    alt: Amelis in front of the new Kerlaches trailer
+  - gallery_image: /assets/media/img_20220130_100010_544.jpg
+    alt: A close shot of freshly baked kolaches out of the oven
+  - gallery_image: /assets/media/277289405_443002480932059_2636363105311338332_n.webp
+    alt: Amelis in the new bakery space
+  - gallery_image: /assets/media/kerlinbbq_2486529775969472446_451056176_0_1080x1080.jpg
+    alt: A half-eaten kerlache.
 ---

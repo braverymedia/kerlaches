@@ -1,15 +1,20 @@
 {% if layout != "top" %}
     {% set width = "385" %}
     {% set height = "420" %}
-    {% set resize = "smartcrop" %}
 {% else %}
     {% set width = "385" %}
     {% set height = "255" %}
-    {% set resize = "smartcrop" %}
 {% endif %}
 <article class="content-card layout-{{ layout }}">
     <figure>
-        <img src="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }}" alt="{{ card.alt }}" srcset="{{ card.card_image }}?nf_resize=smartcrop&w={{ width }}&h={{ height }} 1x, {{ card.card_image }}?nf_resize=smartcrop&w={{ width * 2 }}&h={{ height * 2 }} 2x" width="{{ width }}" height="{{ height }}" loading="lazy"/>
+        {% respimg
+            src="{{card.card_image}}",
+            width="{{width}}",
+            height="{{height}}",
+            sizes="320, 960, 1280",
+            alt="{{ card.alt }}",
+            loading="lazy"
+        %}
     </figure>
     <section>
         {{ card.content | md | safe }}

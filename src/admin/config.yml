@@ -19,6 +19,8 @@ collections:
     files:
       - label: "Home"
         name: "home"
+        editor:
+          preview: false
         file: "src/index.md"
         fields:
           - label: "Slideshow Gallery"
@@ -85,21 +87,6 @@ collections:
               - label: "Image Description"
                 name: "alt"
                 widget: string
-  - label: "Overlay Menu"
-    name: "overlay_menu"
-    editor:
-      preview: false
-    files:
-      - label: "Overlay"
-        name: "overlay"
-        file: "src/_data/overlay.yaml"
-        fields:
-          - label: Expandable Sections
-            name: expandables
-            widget: list
-            fields:
-              - { label: "Section Title", name: title, widget: string }
-              - { label: "Content", name: content, widget: markdown }
   - label: "Settings"
     name: "settings"
     editor:
@@ -150,68 +137,68 @@ collections:
         name: "restaurant"
         file: "src/_data/restaurant.yaml"
         fields:
-          - { label: "Online Ordering Link", name: "order_link", widget: string }
-          - { label: "Gift Cards Link", name: "gift_cards", widget: string }
+          - { label: "Online Ordering Link", name: "order_link", widget: string, required: false }
+          - { label: "Gift Cards Link", name: "gift_cards", widget: string, required: false }
           - label: "Opening Hours"
             name: 'openingHours'
-            widget: 'list'
+            widget: 'object'
             fields:
               - label: "Monday"
                 name: 'mo'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'monday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
               - label: "Tuesday"
                 name: 'tu'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'tuesday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
               - label: "Wednesday"
                 name: 'we'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'wednesday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
               - label: "Thursday"
                 name: 'th'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'thursday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
               - label: "Friday"
                 name: 'fr'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'friday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
               - label: "Saturday"
                 name: 'sa'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'saturday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
               - label: "Sunday"
                 name: 'su'
                 widget: 'object'
                 fields:
                   - { label: 'Day', name: 'day', default: 'sunday', widget: 'hidden' }
-                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false }
-                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
-                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A" }
+                  - { label: 'Closed', name: 'closed', widget: 'boolean', default: false, required: false }
+                  - { label: 'Opening Time', name: 'open_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
+                  - { label: 'Closing Time', name: 'closing_time', widget: 'datetime', format: "h:mm A", time_format: "h:mm A", date_format: false }
       - label: SEO
         name: "seo"
         file: "src/_data/seo.yaml"
