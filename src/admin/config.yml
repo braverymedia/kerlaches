@@ -23,10 +23,9 @@ collections:
           preview: false
         file: "src/index.md"
         fields:
-          - label: "Slideshow Gallery"
-            name: "slider"
-            allow_add: true
-            widget: list
+          - label: "Cover Image"
+            name: "cover"
+            widget: object
             fields:
               - label: "Image"
                 name: "gallery_image"

@@ -9,13 +9,19 @@
         {% endif %}
         {% include "components/header.njk" %}
         <main id="top">
+            {% if cover.image %}
             <section class="cover-image">
                 <figure>
-                    {% for item in slider %}
-                        {% include "components/gallery-slide.njk" %}
-                    {% endfor %}
+                    <img
+                        src="{% src cover.image %}"
+                        srcset="{% srcset cover.image %}"
+                        alt="cover.alt"
+                        width="900"
+                        height="550"
+                    />
                 </figure>
             </section>
+            {% endif %}
             <div class="button-group default-margins">
                 {% for button in restaurant.cta %}
                     {% if button.action == "reservations" %}

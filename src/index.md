@@ -1,10 +1,35 @@
 ---
-layout: layouts/base.njk
-title: Kerlaches
-section: home
 slider:
   - gallery_image: /assets/media/img_20220227_095959_546.jpg
     alt: Kolaches on plates surrounded by leaves.
+cards:
+  - content: >-
+      > “Kerlin BBQ’s barbecue kolaches are even better than I remembered.”
+
+
+      <cite>[Daniel Vaughn, ***Texas Monthly***](https://www.texasmonthly.com/bbq/kerlin-bbq-barbecue-kolaches/)
+    card_image: /assets/media/img_20220123_100325_659.jpg
+    alt: A stack of kerlaches
+    image_style: Left
+section: home
+column_cards: []
+grid:
+  - gallery_image: /assets/media/277699738_1069780466904105_717307855542515772_n.webp
+    alt: Kerlaches fresh out of the oven
+  - gallery_image: /assets/media/img_20220206_085717_853.jpg
+    alt: A stack of cheese and brisket filled kolaches
+  - gallery_image: /assets/media/274582277_462373718658974_3917128653619594150_n.webp
+    alt: Amelis in front of the new Kerlaches trailer
+  - gallery_image: /assets/media/img_20220130_100010_544.jpg
+    alt: A close shot of freshly baked kolaches out of the oven
+  - gallery_image: /assets/media/277289405_443002480932059_2636363105311338332_n.webp
+    alt: Amelis in the new bakery space
+  - gallery_image: /assets/media/kerlinbbq_2486529775969472446_451056176_0_1080x1080.jpg
+    alt: A half-eaten kerlache.
+layout: layouts/base.njk
+cover:
+  gallery_image: /assets/media/img_20220227_095959_546.jpg
+  alt: Kerlaches on two plates surrounded by leaves.
 site_intro:
   subhead: Smoke • Dough • Love
   content: >-
@@ -28,27 +53,5 @@ site_intro:
     \
 
     With the increasing demand and limited space at Kerlin BBQ, Bill and Amelis realized that they were becoming inaccessible to many people, often selling out in less than an hour. Wanting to make as many people happy as possible, they decided to open a standalone concept dedicated exclusively to their famous Kerlaches.
-cards:
-  - content: >-
-      > “Kerlin BBQ’s barbecue kolaches are even better than I remembered.”
-
-
-      <cite>[Daniel Vaughn, ***Texas Monthly***](https://www.texasmonthly.com/bbq/kerlin-bbq-barbecue-kolaches/)
-    card_image: /assets/media/img_20220123_100325_659.jpg
-    alt: A stack of kerlaches
-    image_style: Left
-column_cards: []
-grid:
-  - gallery_image: /assets/media/277699738_1069780466904105_717307855542515772_n.webp
-    alt: Kerlaches fresh out of the oven
-  - gallery_image: /assets/media/img_20220206_085717_853.jpg
-    alt: A stack of cheese and brisket filled kolaches
-  - gallery_image: /assets/media/274582277_462373718658974_3917128653619594150_n.webp
-    alt: Amelis in front of the new Kerlaches trailer
-  - gallery_image: /assets/media/img_20220130_100010_544.jpg
-    alt: A close shot of freshly baked kolaches out of the oven
-  - gallery_image: /assets/media/277289405_443002480932059_2636363105311338332_n.webp
-    alt: Amelis in the new bakery space
-  - gallery_image: /assets/media/kerlinbbq_2486529775969472446_451056176_0_1080x1080.jpg
-    alt: A half-eaten kerlache.
+title: Kerlaches
 ---
