@@ -1,12 +1,9 @@
 const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
+const { PurgeCSS } = require('purgecss');
 const markdownIt = require("markdown-it");
 const responsiveImages = require("eleventy-plugin-responsive-images");
 
-let imgConfig = {
-    "breakpoints": [ 375, 768, 1024, 1360, 1600, 1980 ],
-    "resize": "fit"
-}
 module.exports = function (eleventyConfig) {
     eleventyConfig.cloudinaryCloudName = "kerlaches";
     eleventyConfig.hostname = "https://playful-crisp-33f7e0.netlify.app/";
@@ -64,7 +61,7 @@ module.exports = function (eleventyConfig) {
      * @see {@link https://github.com/FullHuman/purgecss}
      */
     eleventyConfig.addTransform('purge-and-inline-css', async function(content) {
-        if (process.env.ELEVENTY_ENV !== 'production' || !this.outputPath.endsWith('.html')) {
+        if (!this.outputPath.endsWith('.html')) {
             return content;
         }
 

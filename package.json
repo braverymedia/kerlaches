@@ -37,7 +37,7 @@
 		"@rollup/plugin-commonjs": "^20.0.0",
 		"@rollup/plugin-node-resolve": "^13.0.4",
 		"autoprefixer": "^10.3.4",
-		"clean-css": "^4.2.3",
+		"clean-css": "^4.2.4",
 		"cross-env": "^7.0.3",
 		"cssnano": "^5.0.8",
 		"eleventy-plugin-responsive-images": "^0.0.5",

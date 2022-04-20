@@ -1,8 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>{{ details.site_title }}</title>
-<meta name="description" content="{{ details.site_description }}">
-<!-- INLINE CSS-->
+<title>{{ settings.site_title }}</title>
+<meta name="description" content="{{ settings.site_description }}">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +14,7 @@
         ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
 </script>
+<!-- INLINE CSS-->
 {% if site.env != 'development' and settings.ga %}
 <!-- Google Analytics -->
 <script>
