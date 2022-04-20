@@ -7,12 +7,11 @@
 {% endif %}
 <article class="content-card layout-{{ layout }}">
     <figure>
-        {% respimg
-            src = card.card_image,
-            width = width,
-            height="{{height}}",
-            sizes="320, 960, 1280",
-            alt= card.alt,
+        {% cloudImg
+            card.card_image,
+            card.alt,
+            width,
+            height,
             loading="lazy"
         %}
     </figure>

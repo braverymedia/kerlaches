@@ -1,13 +1,12 @@
 {% set width = "320" %}
 {% set height = "512" %}
 <figure class="grid-image">
-    {% respimg
-        src = item.gallery_image,
-        width = width,
-        height = height,
-        sizes = "320, 960, 1280",
-        alt = item.alt ,
-        loading = "lazy",
-        class = "img-zoomable"
+    {% cloudImg
+        item.gallery_image,
+        item.alt,
+        width,
+        height,
+        "img-zoomable",
+        "lazy"
     %}
 </figure>

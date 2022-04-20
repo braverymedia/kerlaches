@@ -1,7 +1,4 @@
 ---
-slider:
-  - gallery_image: /assets/media/img_20220227_095959_546.jpg
-    alt: Kolaches on plates surrounded by leaves.
 cards:
   - content: >-
       > “Kerlin BBQ’s barbecue kolaches are even better than I remembered.”
