@@ -8,11 +8,11 @@
 <article class="content-card layout-{{ layout }}">
     <figure>
         {% respimg
-            src="{{card.card_image}}",
-            width="{{width}}",
+            src = card.card_image,
+            width = width,
             height="{{height}}",
             sizes="320, 960, 1280",
-            alt="{{ card.alt }}",
+            alt= card.alt,
             loading="lazy"
         %}
     </figure>

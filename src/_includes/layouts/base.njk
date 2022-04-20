@@ -9,15 +9,12 @@
         {% endif %}
         {% include "components/header.njk" %}
         <main id="top">
-            <section id="slider" class="glide">
-                <div data-glide-el="track" class="glide__track">
-                    <figure class="slideshow glide__slides">
-                        {% for item in slider %}
-                            {% include "components/gallery-slide.njk" %}
-                        {% endfor %}
-                    </figure>
-                </div>
-                <span class="pager"></span>
+            <section class="cover-image">
+                <figure>
+                    {% for item in slider %}
+                        {% include "components/gallery-slide.njk" %}
+                    {% endfor %}
+                </figure>
             </section>
             <div class="button-group default-margins">
                 {% for button in restaurant.cta %}

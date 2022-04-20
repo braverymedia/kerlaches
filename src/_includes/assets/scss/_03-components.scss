@@ -19,16 +19,7 @@
 		color: var(--button-hover);
 	}
 }
-#ot-reservation-widget {
-	width: 100% !important;
-	padding: 0 !important;
-	.ot-dtp-picker {
-		font-family: inherit !important;
-		font-size: inherit !important;
-		line-height: 150% !important;
-	}
-	font-size: var(--type-base) !important;
-}
+
 .location,
 .hours {
 	text-align: center;
@@ -53,128 +44,6 @@
 	font-size: var(--type-sm);
 }
 
-// Nav
-.nav-overlay {
-	position: fixed;
-	left: 0%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	z-index: 10;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	opacity: 0;
-	visibility: hidden;
-	@include mq(md) {
-		width: 70vw;
-	}
-	[data-menu-visible="true"] & {
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-.menu-trigger,
-[role="dialog"] button {
-	appearance: none;
-	background-color: transparent;
-	border: 0;
-	padding: 0;
-	box-shadow: none;
-	color: inherit;
-	margin: 0;
-	position: absolute;
-	left: 16px;
-	top: 50%;
-	transform: translateY(-50%);
-	right: auto;
-	bottom: auto;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-	cursor: pointer;
-	&:before,
-	&:after {
-		background: currentColor;
-		content: "";
-		height: 2px;
-		width: 100%;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		transform-origin: center;
-		flex: 100%;
-	}
-}
-.menu-trigger {
-	&:before {
-		animation: topLineOpen;
-		animation-duration: 0.35s;
-		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-		animation-direction: normal;
-		animation-fill-mode: forwards;
-	}
-	&:after {
-		animation: bottomLineOpen;
-		animation-duration: 0.35s;
-		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-		animation-direction: normal;
-		animation-fill-mode: forwards;
-	}
-	@include mq(md) {
-		top: 16px;
-		transform: unset;
-	}
-}
-
-#slider {
-	height: calc(80vh - 85px);
-	overflow: hidden;
-	.slideshow {
-		height: 100%;
-		img {
-			height: 100%;
-			width: auto;
-			max-width: none;
-			object-fit: cover;
-		}
-	}
-	.glide__track {
-		height: 100%;
-		width: 100%;
-	}
-	.pager {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 3px 6px 0px;
-		color: var(--color-cream);
-		font-size: 12px;
-		position: absolute;
-		width: 47px;
-		height: 21px;
-		right: 8px;
-		bottom: 8px;
-
-		background: rgba(0, 0, 0, 0.2);
-		backdrop-filter: blur(4px);
-		/* Note: backdrop-filter has minimal browser support */
-
-		border-radius: 4px;
-	}
-	@include mq(md) {
-		height: 40vh;
-	}
-	@include mq(lg) {
-		height: 100vh;
-	}
-}
 // "menu" stuff.
 .kerlaches-details {
 	visibility: hidden;
@@ -215,42 +84,6 @@
 	}
 }
 
-[data-expandable] {
-	display: flex;
-	width: 100%;
-	justify-content: flex-start;
-	align-items: center;
-	span {
-		margin-right: 26px;
-	}
-	/* make sure there is a focus style for keyboard accessibility */
-	&:focus {
-		outline: 1px dotted var(--color-cream);
-		outline-offset: 1px;
-	}
-}
-.accordion div {
-	max-width: 570px;
-	margin-bottom: 25px;
-	&[aria-hidden="true"] {
-		max-height: 0;
-		visibility: hidden;
-		opacity: 0;
-		transition: opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1),
-			max-height 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.05s;
-	}
-	&[aria-hidden="false"] {
-		max-height: 500px;
-		visibility: visible;
-		opacity: 1;
-		transition: max-height 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
-			opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
-	}
-	@include mq(md) {
-		padding-left: 62px;
-	}
-}
-
 .announcement {
 	background: var(--color-red);
 	color: var(--color-cream);
@@ -274,56 +107,5 @@
 			font-size: var(--type-xs);
 			text-align: center;
 		}
-	}
-}
-
-[data-banner="full"] {
-	overflow: hidden;
-	.announcement {
-		height: 100vh;
-		width: 100vw;
-		position: fixed;
-		padding: 50px;
-		z-index: 10;
-		justify-content: center;
-		align-items: center;
-		@include mq(md) {
-			width: 70vw;
-		}
-	}
-}
-
-#reservations {
-	background-color: rgba(#1a191a, 0.9);
-	backdrop-filter: blur(8px);
-	position: fixed;
-	height: 100vh;
-	width: 100vw;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	z-index: 2000;
-	padding: 20px;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	display: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
-	&.visible {
-		display: flex;
-		opacity: 1;
-	}
-}
-[role="dialog"] button {
-	color: var(--color-cream);
-	top: auto;
-	bottom: 50px;
-	left: 50%;
-	transform: translateX(-9px);
-	&:before {
-		transform: rotate(45deg) translateY(8px) !important;
-	}
-	&:after {
-		transform: rotate(-45deg) translateY(-8px) !important;
 	}
 }

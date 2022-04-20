@@ -1,45 +1,60 @@
 p {
-    margin-top: 16px;
-    margin-bottom: 10px;
+	margin-top: 16px;
+	margin-bottom: 10px;
 }
 a {
-    color: var(--color-red);
-    text-decoration: underline;
+	color: var(--color-red);
+	text-decoration: underline;
 }
 h2 {
-    font-size: var(--type-xl);
-    font-weight: 400;
-    @include mq(md) {
-        font-size: var(--type-xxl);
-    }
+	font-size: var(--type-xl);
+	font-weight: 400;
+	@include mq(md) {
+		font-size: var(--type-xxl);
+	}
 }
 h3 {
-    font-size: var(--type-xl);
-    font-weight: 700;
+	font-size: var(--type-xl);
+	font-weight: 700;
 }
 
-h2, h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    line-height: 120%;
+h2,
+h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height: 120%;
 }
 
 button,
 input,
 textarea,
 p {
-    font-size: inherit;
-    color: inherit;
+	font-size: inherit;
+	color: inherit;
 }
 .is-text-normal {
-    margin-top: 24px;
-    margin-bottom: 0px;
-    font-size: var(--type-md);
+	margin-top: 24px;
+	margin-bottom: 0px;
+	font-size: var(--type-md);
 }
 .is-type-sm {
-    font-size: var(--type-xs);
+	font-size: var(--type-xs);
 }
 
 #intro h2 {
-    max-width: 540px;
+	max-width: 540px;
+}
+
+blockquote {
+	font-size: var(--type-xl);
+	font-weight: 700;
+	font-style: italic;
+	color: var(--color-red);
+	max-width: 360px;
+}
+blockquote + p cite {
+	font-style: normal;
+}
+cite a {
+	color: var(--color-black);
 }

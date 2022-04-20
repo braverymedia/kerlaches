@@ -2,7 +2,9 @@
 layout: layouts/base.njk
 title: Kerlaches
 section: home
-slider: []
+slider:
+  - gallery_image: /assets/media/img_20220227_095959_546.jpg
+    alt: Kolaches on plates surrounded by leaves.
 site_intro:
   subhead: Smoke • Dough • Love
   content: >-

@@ -67,13 +67,13 @@ $mq: (
 }
 
 :root {
-    --font-family: neuzeit-grotesk, sans-serif;
-    --color-black: #1A191A;
-    --color-grey: #444243;
-    --color-navy: #1A3C51;
+    --font-family: Barlow, sans-serif;
+    --color-black: #011627;
+    --color-grey: #6C6760;
+    --color-navy: #114B5F;
     --color-green: #789F90;
-    --color-red: #B2502E;
-    --color-cream: #F5EADB;
+    --color-red: #791807;
+    --color-cream: #FFFAEC;
     --color-white: #FFF;
 
     --type-base: 112.5%; // 18px;
@@ -88,50 +88,4 @@ $mq: (
     --radius: 10px;
     --button-color: var(--color-red);
     --button-hover: var(--color-cream);
-}
-
-// Animation
-@keyframes topLineClose {
-    0% {
-        transform: rotate(0deg) translateY(0px);
-    }
-    50% {
-        transform: rotate(0deg) translateY(8px);
-    }
-    100% {
-        transform: rotate(45deg) translateY(8px);
-    }
-}
-@keyframes bottomLineClose {
-    0% {
-        transform: rotate(0deg) translateY(0px);
-    }
-    50% {
-        transform: rotate(0deg) translateY(-8px);
-    }
-    100% {
-        transform: rotate(-45deg) translateY(-8px);
-    }
-}
-@keyframes topLineOpen {
-    0% {
-        transform: rotate(45deg) translateY(8px);
-    }
-    50% {
-        transform: rotate(0deg) translateY(8px);
-    }
-    100% {
-        transform: rotate(0deg) translateY(0px);
-    }
-}
-@keyframes bottomLineOpen {
-    0% {
-        transform: rotate(-45deg) translateY(-8px);
-    }
-    50% {
-        transform: rotate(0deg) translateY(-8px);
-    }
-    100% {
-        transform: rotate(0deg) translateY(0px);
-    }
 }
