@@ -1,5 +1,5 @@
-site_url: https://kerlaches.com
-display_url: https://kerlaches.com
+site_url: https://playful-crisp-33f7e0.netlify.app
+display_url: https://playful-crisp-33f7e0.netlify.app
 search: false
 backend:
   name: git-gateway
