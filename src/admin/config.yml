@@ -2,13 +2,11 @@ site_url: https://kerlaches.com
 display_url: https://kerlaches.com
 search: false
 backend:
-  # Use netlify identity as backend
   name: git-gateway
   branch: main
 media_folder: "src/_includes/assets/media"
 public_folder: "/assets/media"
 # Please run "npx netlify-cms-proxy-server" for local backend
-local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: Homepage
@@ -98,6 +96,7 @@ collections:
           - { label: "Site Title", name: site_title, widget: string }
           - { label: "SEO Description", name: site_description, widget: text }
           - { label: "Google Analytics ID", name: ga, widget: string }
+          - { label: "Site Logo", name: "site-logo", widget: image }
           - label: "Social Media"
             name: social
             widget: object
