@@ -96,7 +96,7 @@ collections:
           - { label: "Site Title", name: site_title, widget: string }
           - { label: "SEO Description", name: site_description, widget: text }
           - { label: "Google Analytics ID", name: ga, widget: string }
-          - { label: "Site Logo", name: "site-logo", widget: image }
+          - { label: "Site Logo", name: "site_logo", widget: image }
           - label: "Social Media"
             name: social
             widget: object
