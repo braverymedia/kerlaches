@@ -9,17 +9,17 @@ module.exports = function (eleventyConfig) {
     const cloudinaryCloudName = "kerlaches";
     const hostname = "https://playful-crisp-33f7e0.netlify.app";
     const cloudinaryWidths = [ 320, 740, 960, 1200 ];
-    const cloudinaryTransforms = "q_auto,dpr_2.0,f_auto,";
 
     eleventyConfig.addShortcode('cloudImg', (path, alt, width, height, loading, classes, sizes ) => {
         const fetchBase = `https://res.cloudinary.com/${cloudinaryCloudName}/image/fetch/`;
-        let sizing = `w_${width},h_${ height ? height : 'auto' }`;
+        let baseTransforms = "q_auto,dpr_2.0,f_auto,c_fill";
         if ( width && height ) {
-            sizing += `,ar_${width}:${height}`
+            baseTransforms += `,ar_${width}:${height}`
         }
-        const src = `${fetchBase}${cloudinaryTransforms}${sizing}/${hostname}${path}`;
+        const rootSrc = `${fetchBase}${baseTransforms}`;
+        const src = `${rootSrc},w_${width},h_${height ? height : 'auto'}/${hostname}${path}`;
         const srcset = cloudinaryWidths.map(w => {
-            return `${fetchBase}q_auto,f_auto,w_${w}/${hostname}${path} ${w}w`;
+            return `${rootSrc},w_${w}/${hostname}${path} ${w}w`;
         }).join(', ');
 
         return `<img src="${src}" srcset="${srcset}" sizes="${sizes ? sizes : '100vw'}" alt="${alt ? alt : ''}" width="${width}" height="${height}"${ classes ? 'class="' + classes + '"' : ''} loading="${loading ? loading : 'eager'}">`;

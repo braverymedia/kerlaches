@@ -1,32 +1,24 @@
-cta:
-  - label: Make a Reservation
-    action: reservations
-  - label: Order Online
-    action: order
-service_hours:
-  - service: Hours
-    hours: "Wed–Sun: 8am–3pm"
 openingHours:
-  mo:
-    open_time: 2:14 PM
-    closing_time: 3:00 PM
+  - day: Monday
+    open_time: 1:01 PM
+    closing_time: 1:01 PM
     closed: true
-  tu:
-    open_time: 2:14 PM
-    closing_time: 2:14 PM
+  - day: Tuesday
+    open_time: 1:01 PM
+    closing_time: 1:01 PM
     closed: true
-  we:
+  - day: Wednesday
     open_time: 8:00 AM
     closing_time: 3:00 PM
-  th:
+  - day: Thursday
     open_time: 8:00 AM
     closing_time: 3:00 PM
-  fr:
+  - day: Friday
     open_time: 8:00 AM
     closing_time: 3:00 PM
-  sa:
+  - day: Saturday
     open_time: 8:00 AM
     closing_time: 3:00 PM
-  su:
+  - day: Sunday
     open_time: 8:00 AM
     closing_time: 3:00 PM

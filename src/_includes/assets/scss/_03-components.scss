@@ -23,6 +23,12 @@
 .location,
 .hours {
 	text-align: center;
+	ul {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
 }
 
 .email-contact {
@@ -46,10 +52,6 @@
 
 // "menu" stuff.
 .kerlaches-details {
-	visibility: hidden;
-	opacity: 0;
-	height: calc(100vh - 85px);
-	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -57,8 +59,7 @@
 	padding-right: 20px;
 	width: 100%;
 	@include mq(md) {
-		visibility: visible;
-		opacity: 1;
+		flex: 1;
 	}
 	@include mq(lg) {
 		padding-left: 50px;
@@ -68,9 +69,10 @@
 
 .hours {
 	h2 {
-		font-size: var(--type-sm);
+		font-size: var(--type-lg);
 		font-weight: 700;
 		margin-bottom: 0;
+		color: var(--color-red);
 	}
 	p {
 		margin-top: 0;
@@ -107,5 +109,12 @@
 			font-size: var(--type-xs);
 			text-align: center;
 		}
+	}
+}
+
+.cover-image {
+	padding: 0 18px;
+	@include mq(md) {
+		padding: 0;
 	}
 }

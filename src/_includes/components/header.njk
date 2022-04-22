@@ -7,14 +7,7 @@
     </section>
     <section class="kerlaches-details">
         <article class="button-group">
-            {% for button in restaurant.cta %}
-                {% if button.action == "order" %}
-                    <a href="{{ settings.order_link }}" class="cta">{{ button.label }}</a>
-                {% endif %}
-                {% if button.action == "gift-card" %}
-                    <a href="{{ settings.gift_cards }}" class="cta">{{ button.label }}</a>
-                {% endif %}
-            {% endfor %}
+            <a href="https://goo.gl/maps/XE2bFdThfF3FFkZQ8" class="cta">Get Directions</a>
         </article>
         <aside class="hours">
             <h2>Hours</h2>
@@ -24,10 +17,10 @@
                     {% if day.closed === true -%}
                         Closed
                     {%- else -%}
-                        <time datetime="{{day.open_time}}">{{ day.open_time }}</time> - <time datetime="{{ day.closing_time }}">{{ day.closing_time }}</time>
+                    <time datetime="{{day.open_time}}">{{ day.open_time }}</time> - <time datetime="{{ day.closing_time }}">{{ day.closing_time }}</time>
                     {%- endif %}
                 {% endset %}
-                <li><strong>{{ day.day }}</strong>: {{ hours }} </li>
+                <li><strong>{{ day.day }}</strong>: {{ hours | safe }} </li>
             {% endfor %}
             </ul>
         </aside>
