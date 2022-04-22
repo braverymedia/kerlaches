@@ -1,8 +1,8 @@
 site_title: Kerlaches
 site_description: The best bbq-stuffed Kolaches in Texas.
-order_link: null
 ga: "311539750"
-site-logo: /assets/media/kerlaches-logo.png
+site_logo: /assets/media/kerlaches-logo.png
+order_link: null
 social:
   instagram: https://instagram.com/kerlaches
 banner:
@@ -16,6 +16,7 @@ contact_info:
   state: TX
   zipcode: "78702"
   phone: (512) 521-1604
+site-logo: /assets/media/kerlaches-logo.png
 gift_cards: null
 emails:
   - email: info@kerlachesaustin.com
